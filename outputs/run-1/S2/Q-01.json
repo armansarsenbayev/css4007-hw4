@@ -1,0 +1,71 @@
+{
+  "id": "Q-01",
+  "strategy": "S2",
+  "question": "Which district has the higher population density in 2025, Ossbridge or Ossford, and by how many residents per square kilometre?",
+  "gold": "Ossbridge | 4.6",
+  "parsed": "ossbridge | 4.6",
+  "answered": true,
+  "correct": true,
+  "api_calls": 5,
+  "input_tokens": 10985,
+  "output_tokens": 684,
+  "cached_tokens": 10938,
+  "reasoning_tokens": 0,
+  "seconds": 2.502,
+  "final_text": "ANSWER: ossbridge | 4.6",
+  "calls": [
+    {
+      "input_tokens": 2197,
+      "output_tokens": 132,
+      "cached_tokens": 2162,
+      "reasoning_tokens": 0,
+      "seconds": 2.333,
+      "finish_reason": "stop"
+    },
+    {
+      "input_tokens": 2197,
+      "output_tokens": 125,
+      "cached_tokens": 2194,
+      "reasoning_tokens": 0,
+      "seconds": 2.327,
+      "finish_reason": "stop"
+    },
+    {
+      "input_tokens": 2197,
+      "output_tokens": 132,
+      "cached_tokens": 2194,
+      "reasoning_tokens": 0,
+      "seconds": 2.149,
+      "finish_reason": "stop"
+    },
+    {
+      "input_tokens": 2197,
+      "output_tokens": 144,
+      "cached_tokens": 2194,
+      "reasoning_tokens": 0,
+      "seconds": 2.502,
+      "finish_reason": "stop"
+    },
+    {
+      "input_tokens": 2197,
+      "output_tokens": 151,
+      "cached_tokens": 2194,
+      "reasoning_tokens": 0,
+      "seconds": 1.64,
+      "finish_reason": "stop"
+    }
+  ],
+  "log": {
+    "samples": [
+      "Facts used:\n- Ossbridge: 52,904 residents and 1,284.6 km².\n- Ossford: 30,982 residents and 846.2 km².\n- Population density = population ÷ area.\n\nCalculations:\n- Ossbridge: 52,904 ÷ 1,284.6 = 41.182 residents/km².\n- Ossford: 30,982 ÷ 846.2 = 36.615 residents/km².\n- Difference: 41.182 − 36.615 = 4.567 residents/km².\n\nANSWER: Ossbridge | 4.567",
+      "Facts used:\n- Ossbridge: 52,904 residents and 1,284.6 km².\n- Ossford: 30,982 residents and 846.2 km².\n\nCalculations:\n- Ossbridge density = 52,904 ÷ 1,284.6 = 41.182 residents/km².\n- Ossford density = 30,982 ÷ 846.2 = 36.616 residents/km².\n- Difference = 41.182 − 36.616 = 4.566 residents/km².\n\nANSWER: Ossbridge | 4.566",
+      "Facts used:\n- Ossbridge: 52,904 residents and 1,284.6 km².\n- Ossford: 30,982 residents and 846.2 km².\n- Population density = population ÷ area.\n\nCalculations:\n- Ossbridge: 52,904 ÷ 1,284.6 = 41.184 residents/km².\n- Ossford: 30,982 ÷ 846.2 = 36.615 residents/km².\n- Difference: 41.184 − 36.615 = 4.569 residents/km².\n\nANSWER: Ossbridge | 4.569",
+      "Facts used:\n- Ossbridge: 52,904 residents and 1,284.6 square kilometres.\n- Ossford: 30,982 residents and 846.2 square kilometres.\n\nCalculations:\n- Ossbridge density = 52,904 ÷ 1,284.6 = 41.183 residents/km².\n- Ossford density = 30,982 ÷ 846.2 = 36.615 residents/km².\n- Difference = 41.183 − 36.615 = 4.568 residents/km².\n\nOssbridge has the higher population density by 4.568 residents per square kilometre.\n\nANSWER: Ossbridge | 4.568",
+      "Facts used:\n- Ossbridge: 52,904 residents and 1,284.6 km².\n- Ossford: 30,982 residents and 846.2 km².\n- Population density = population ÷ area.\n\nCalculations:\n- Ossbridge: 52,904 ÷ 1,284.6 = 41.181 residents/km².\n- Ossford: 30,982 ÷ 846.2 = 36.614 residents/km².\n- Difference: 41.181 − 36.614 = 4.567 residents/km².\n\nOssbridge has the higher population density by 4.567 residents per square kilometre.\n\nANSWER: Ossbridge | 4.567"
+    ],
+    "votes": {
+      "ossbridge | 4.6": 5
+    },
+    "winner_count": 5
+  }
+}

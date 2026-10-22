@@ -1,0 +1,71 @@
+{
+  "id": "Q-09",
+  "strategy": "S2",
+  "question": "Which district has the higher population density in 2025, Brightwater or Millbrook, and by how many residents per square kilometre?",
+  "gold": "Millbrook | 0.6",
+  "parsed": "millbrook | 0.6",
+  "answered": true,
+  "correct": true,
+  "api_calls": 5,
+  "input_tokens": 10985,
+  "output_tokens": 795,
+  "cached_tokens": 10970,
+  "reasoning_tokens": 0,
+  "seconds": 2.662,
+  "final_text": "ANSWER: millbrook | 0.6",
+  "calls": [
+    {
+      "input_tokens": 2197,
+      "output_tokens": 150,
+      "cached_tokens": 2194,
+      "reasoning_tokens": 0,
+      "seconds": 2.042,
+      "finish_reason": "stop"
+    },
+    {
+      "input_tokens": 2197,
+      "output_tokens": 150,
+      "cached_tokens": 2194,
+      "reasoning_tokens": 0,
+      "seconds": 2.662,
+      "finish_reason": "stop"
+    },
+    {
+      "input_tokens": 2197,
+      "output_tokens": 169,
+      "cached_tokens": 2194,
+      "reasoning_tokens": 0,
+      "seconds": 2.217,
+      "finish_reason": "stop"
+    },
+    {
+      "input_tokens": 2197,
+      "output_tokens": 150,
+      "cached_tokens": 2194,
+      "reasoning_tokens": 0,
+      "seconds": 2.217,
+      "finish_reason": "stop"
+    },
+    {
+      "input_tokens": 2197,
+      "output_tokens": 176,
+      "cached_tokens": 2194,
+      "reasoning_tokens": 0,
+      "seconds": 2.215,
+      "finish_reason": "stop"
+    }
+  ],
+  "log": {
+    "samples": [
+      "Facts used:\n- Brightwater’s corrected 2025 area is 921.4 square kilometres, and its 2025 population is 44,675.\n- Millbrook’s 2025 area is 758.6 square kilometres, and its 2025 population is 37,203.\n\nCalculations:\n- Brightwater density = 44,675 ÷ 921.4 = 48.481 residents per square kilometre.\n- Millbrook density = 37,203 ÷ 758.6 = 49.039 residents per square kilometre.\n- Difference = 49.039 − 48.481 = 0.558 residents per square kilometre.\n\nANSWER: Millbrook | 0.558",
+      "Facts used:\n- Brightwater’s corrected 2025 area is 921.4 square kilometres, and its 2025 population is 44,675.\n- Millbrook’s 2025 area is 758.6 square kilometres, and its 2025 population is 37,203.\n\nCalculations:\n- Brightwater density = 44,675 ÷ 921.4 = 48.481 residents per square kilometre.\n- Millbrook density = 37,203 ÷ 758.6 = 49.044 residents per square kilometre.\n- Difference = 49.044 − 48.481 = 0.563 residents per square kilometre.\n\nANSWER: Millbrook | 0.563",
+      "Facts used:\n- Brightwater’s corrected 2025 area is 921.4 km² (NR-16), and its 2025 population is 44,675 (NR-05).\n- Millbrook’s 2025 population is 37,203 and area is 758.6 km² (NR-11).\n\nCalculations:\n- Brightwater density = 44,675 ÷ 921.4 = 48.482 residents/km².\n- Millbrook density = 37,203 ÷ 758.6 = 49.040 residents/km².\n- Difference = 49.040 − 48.482 = 0.558 residents/km².\n\nMillbrook has the higher population density by 0.558 residents per square kilometre.\n\nANSWER: Millbrook | 0.558",
+      "Facts used:\n- Brightwater’s corrected 2025 area is 921.4 square kilometres, and its 2025 population is 44,675.\n- Millbrook’s 2025 area is 758.6 square kilometres, and its 2025 population is 37,203.\n\nCalculations:\n- Brightwater density = 44,675 ÷ 921.4 = 48.481 residents per square kilometre.\n- Millbrook density = 37,203 ÷ 758.6 = 49.039 residents per square kilometre.\n- Difference = 49.039 − 48.481 = 0.558 residents per square kilometre.\n\nANSWER: Millbrook | 0.558",
+      "Facts used:\n- Brightwater’s corrected 2025 area is 921.4 square kilometres (NR-16), and its 2025 population is 44,675 (NR-05).\n- Millbrook’s 2025 population is 37,203 and its area is 758.6 square kilometres (NR-11).\n\nCalculations:\n- Brightwater density = 44,675 ÷ 921.4 = 48.481 residents per square kilometre.\n- Millbrook density = 37,203 ÷ 758.6 = 49.040 residents per square kilometre.\n- Difference = 49.040 − 48.481 = 0.559 residents per square kilometre.\n\nMillbrook has the higher population density by 0.559 residents per square kilometre.\n\nANSWER: Millbrook | 0.559"
+    ],
+    "votes": {
+      "millbrook | 0.6": 5
+    },
+    "winner_count": 5
+  }
+}

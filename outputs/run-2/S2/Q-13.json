@@ -1,0 +1,71 @@
+{
+  "id": "Q-13",
+  "strategy": "S2",
+  "question": "Ossford, Stonecairn and Coldharbour all lost population between the 2020 and 2025 censuses. Which lost the largest percentage, and what was that percentage?",
+  "gold": "Coldharbour | 4.16",
+  "parsed": "coldharbour | 4.16",
+  "answered": true,
+  "correct": true,
+  "api_calls": 5,
+  "input_tokens": 11040,
+  "output_tokens": 894,
+  "cached_tokens": 11025,
+  "reasoning_tokens": 0,
+  "seconds": 2.258,
+  "final_text": "ANSWER: coldharbour | 4.16",
+  "calls": [
+    {
+      "input_tokens": 2208,
+      "output_tokens": 180,
+      "cached_tokens": 2205,
+      "reasoning_tokens": 0,
+      "seconds": 2.14,
+      "finish_reason": "stop"
+    },
+    {
+      "input_tokens": 2208,
+      "output_tokens": 172,
+      "cached_tokens": 2205,
+      "reasoning_tokens": 0,
+      "seconds": 2.135,
+      "finish_reason": "stop"
+    },
+    {
+      "input_tokens": 2208,
+      "output_tokens": 168,
+      "cached_tokens": 2205,
+      "reasoning_tokens": 0,
+      "seconds": 2.258,
+      "finish_reason": "stop"
+    },
+    {
+      "input_tokens": 2208,
+      "output_tokens": 178,
+      "cached_tokens": 2205,
+      "reasoning_tokens": 0,
+      "seconds": 2.156,
+      "finish_reason": "stop"
+    },
+    {
+      "input_tokens": 2208,
+      "output_tokens": 196,
+      "cached_tokens": 2205,
+      "reasoning_tokens": 0,
+      "seconds": 2.132,
+      "finish_reason": "stop"
+    }
+  ],
+  "log": {
+    "samples": [
+      "Facts used:\n- Ossford: population fell from 31,560 to 30,982, a loss of 578.\n- Stonecairn: population fell from 15,473 to 14,926, a loss of 547.\n- Coldharbour: population fell from 11,902 to 11,407, a loss of 495.\n\nPercentage loss = population loss ÷ 2020 population × 100.\n\nCalculations:\n- Ossford: 578 ÷ 31,560 × 100 = 1.831%\n- Stonecairn: 547 ÷ 15,473 × 100 = 3.536%\n- Coldharbour: 495 ÷ 11,902 × 100 = 4.159%\n\nColdharbour lost the largest percentage.\n\nANSWER: Coldharbour | 4.159",
+      "Facts used:\n- Ossford: population fell from 31,560 to 30,982, a loss of 578.\n- Stonecairn: population fell from 15,473 to 14,926, a loss of 547.\n- Coldharbour: population fell from 11,902 to 11,407, a loss of 495.\n\nPercentage loss calculation:\n- Ossford: \\(578 / 31,560 \\times 100 = 1.831\\%\\)\n- Stonecairn: \\(547 / 15,473 \\times 100 = 3.535\\%\\)\n- Coldharbour: \\(495 / 11,902 \\times 100 = 4.158\\%\\)\n\nColdharbour lost the largest percentage.\n\nANSWER: Coldharbour | 4.158",
+      "Facts used:\n- Ossford: population fell from 31,560 to 30,982. Percentage loss = \\((31,560-30,982) / 31,560 \\times 100 = 1.833\\%\\).\n- Stonecairn: population fell from 15,473 to 14,926. Percentage loss = \\((15,473-14,926) / 15,473 \\times 100 = 3.535\\%\\).\n- Coldharbour: population fell from 11,902 to 11,407. Percentage loss = \\((11,902-11,407) / 11,902 \\times 100 = 4.159\\%\\).\n\nColdharbour lost the largest percentage.\n\nANSWER: Coldharbour | 4.159",
+      "Facts used:\n- Ossford: population fell from 31,560 to 30,982, a loss of 578.\n- Stonecairn: population fell from 15,473 to 14,926, a loss of 547.\n- Coldharbour: population fell from 11,902 to 11,407, a loss of 495.\n\nPercentage loss calculation:\n- Ossford: \\(578 \\div 31,560 \\times 100 = 1.831\\%\\)\n- Stonecairn: \\(547 \\div 15,473 \\times 100 = 3.535\\%\\)\n- Coldharbour: \\(495 \\div 11,902 \\times 100 = 4.159\\%\\)\n\nColdharbour lost the largest percentage of its population.\n\nANSWER: Coldharbour | 4.159",
+      "Facts used:\n- Ossford: 31,560 in 2020 and 30,982 in 2025.\n- Stonecairn: 15,473 in 2020 and 14,926 in 2025.\n- Coldharbour: 11,902 in 2020 and 11,407 in 2025.\n\nPercentage loss calculation:\n- Ossford: \\((31,560 - 30,982) / 31,560 \\times 100 = 1.832\\%\\)\n- Stonecairn: \\((15,473 - 14,926) / 15,473 \\times 100 = 3.534\\%\\)\n- Coldharbour: \\((11,902 - 11,407) / 11,902 \\times 100 = 4.159\\%\\)\n\nColdharbour lost the largest percentage.\n\nANSWER: Coldharbour | 4.159"
+    ],
+    "votes": {
+      "coldharbour | 4.16": 5
+    },
+    "winner_count": 5
+  }
+}

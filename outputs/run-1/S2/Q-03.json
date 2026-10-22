@@ -1,0 +1,73 @@
+{
+  "id": "Q-03",
+  "strategy": "S2",
+  "question": "In 2025, which district's households used more water per resident per day, Lindenmoor or Kelmarsh, and by how many litres per resident per day?",
+  "gold": "Lindenmoor | 5.3",
+  "parsed": "lindenmoor | 5.2",
+  "answered": true,
+  "correct": true,
+  "api_calls": 5,
+  "input_tokens": 11015,
+  "output_tokens": 1278,
+  "cached_tokens": 11000,
+  "reasoning_tokens": 0,
+  "seconds": 3.207,
+  "final_text": "ANSWER: lindenmoor | 5.2",
+  "calls": [
+    {
+      "input_tokens": 2203,
+      "output_tokens": 256,
+      "cached_tokens": 2200,
+      "reasoning_tokens": 0,
+      "seconds": 3.207,
+      "finish_reason": "stop"
+    },
+    {
+      "input_tokens": 2203,
+      "output_tokens": 244,
+      "cached_tokens": 2200,
+      "reasoning_tokens": 0,
+      "seconds": 2.845,
+      "finish_reason": "stop"
+    },
+    {
+      "input_tokens": 2203,
+      "output_tokens": 265,
+      "cached_tokens": 2200,
+      "reasoning_tokens": 0,
+      "seconds": 3.045,
+      "finish_reason": "stop"
+    },
+    {
+      "input_tokens": 2203,
+      "output_tokens": 256,
+      "cached_tokens": 2200,
+      "reasoning_tokens": 0,
+      "seconds": 2.852,
+      "finish_reason": "stop"
+    },
+    {
+      "input_tokens": 2203,
+      "output_tokens": 257,
+      "cached_tokens": 2200,
+      "reasoning_tokens": 0,
+      "seconds": 2.914,
+      "finish_reason": "stop"
+    }
+  ],
+  "log": {
+    "samples": [
+      "Facts used:\n- Lindenmoor: 2,151,400 cubic metres of water in 2025 and 29,051 residents.\n- Kelmarsh: 1,739 megalitres of water in 2025 and 24,117 residents.\n- 1 megalitre = 1,000 cubic metres; 1 cubic metre = 1,000 litres.\n- 2025 has 365 days.\n\nCalculations:\n- Lindenmoor water: 2,151,400 × 1,000 = 2,151,400,000 litres.\n- Lindenmoor per resident per day: 2,151,400,000 ÷ 29,051 ÷ 365 = 202.856 litres.\n- Kelmarsh water: 1,739 × 1,000,000 = 1,739,000,000 litres.\n- Kelmarsh per resident per day: 1,739,000,000 ÷ 24,117 ÷ 365 = 197.615 litres.\n- Difference: 202.856 − 197.615 = 5.241 litres per resident per day.\n\nLindenmoor households used more water.\n\nANSWER: Lindenmoor | 5.241",
+      "Facts used:\n- Lindenmoor: 2,151,400 cubic metres of water and 29,051 residents.\n- Kelmarsh: 1,739 megalitres of water and 24,117 residents.\n- 1 megalitre = 1,000 cubic metres.\n- 2025 has 365 days.\n- 1 cubic metre = 1,000 litres.\n\nCalculations:\n- Lindenmoor water: 2,151,400 × 1,000 = 2,151,400,000 litres.\n- Lindenmoor per resident per day: 2,151,400,000 ÷ 29,051 ÷ 365 = 202.885 litres.\n- Kelmarsh water: 1,739 × 1,000 × 1,000 = 1,739,000,000 litres.\n- Kelmarsh per resident per day: 1,739,000,000 ÷ 24,117 ÷ 365 = 197.617 litres.\n- Difference: 202.885 − 197.617 = 5.268 litres per resident per day.\n\nANSWER: Lindenmoor | 5.268",
+      "Facts used:\n- Lindenmoor: 2,151,400 cubic metres of water and 29,051 residents.\n- Kelmarsh: 1,739 megalitres of water and 24,117 residents.\n- 1 megalitre = 1,000 cubic metres; 1 cubic metre = 1,000 litres.\n- 2025 has 365 days.\n\nCalculations:\n- Lindenmoor water: 2,151,400 × 1,000 = 2,151,400,000 litres.\n- Lindenmoor per resident per day: 2,151,400,000 ÷ 29,051 ÷ 365 = 202.935 litres.\n- Kelmarsh water: 1,739 × 1,000,000 = 1,739,000,000 litres.\n- Kelmarsh per resident per day: 1,739,000,000 ÷ 24,117 ÷ 365 = 197.633 litres.\n- Difference: 202.935 − 197.633 = 5.302 litres per resident per day.\n\nLindenmoor households used more water, by 5.302 litres per resident per day.\n\nANSWER: Lindenmoor | 5.302",
+      "Facts used:\n- Lindenmoor: 29,051 residents and 2,151,400 cubic metres of household water use in 2025.\n- Kelmarsh: 24,117 residents and 1,739 megalitres of household water use in 2025.\n- 1 megalitre = 1,000 cubic metres.\n- 1 cubic metre = 1,000 litres.\n- 2025 has 365 days.\n\nCalculations:\n- Lindenmoor water: 2,151,400 × 1,000 = 2,151,400,000 litres.\n- Lindenmoor per resident per day: 2,151,400,000 ÷ 29,051 ÷ 365 = 202.875 litres.\n- Kelmarsh water: 1,739 × 1,000 × 1,000 = 1,739,000,000 litres.\n- Kelmarsh per resident per day: 1,739,000,000 ÷ 24,117 ÷ 365 = 197.667 litres.\n- Difference: 202.875 − 197.667 = 5.208 litres per resident per day.\n\nANSWER: Lindenmoor | 5.208",
+      "Facts used:\n- Lindenmoor: population 29,051; water use 2,151,400 cubic metres.\n- Kelmarsh: population 24,117; water use 1,739 megalitres.\n- 1 megalitre = 1,000 cubic metres.\n- 2025 has 365 days.\n- 1 cubic metre = 1,000 litres.\n\nCalculations:\n- Lindenmoor water use = 2,151,400 × 1,000 = 2,151,400,000 litres.\n- Lindenmoor per resident per day = 2,151,400,000 ÷ 29,051 ÷ 365 = 202.947 litres.\n- Kelmarsh water use = 1,739 × 1,000 × 1,000 = 1,739,000,000 litres.\n- Kelmarsh per resident per day = 1,739,000,000 ÷ 24,117 ÷ 365 = 197.572 litres.\n- Difference = 202.947 − 197.572 = 5.375 litres per resident per day.\n\nLindenmoor used more water per resident per day.\n\nANSWER: Lindenmoor | 5.375"
+    ],
+    "votes": {
+      "lindenmoor | 5.2": 2,
+      "lindenmoor | 5.3": 2,
+      "lindenmoor | 5.4": 1
+    },
+    "winner_count": 2
+  }
+}

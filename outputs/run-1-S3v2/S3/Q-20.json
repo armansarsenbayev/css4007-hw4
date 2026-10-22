@@ -1,0 +1,362 @@
+{
+  "id": "Q-20",
+  "strategy": "S3",
+  "question": "Of Ossbridge, Ashgrove and Harrowfield, which district had the largest 2025 budget per resident, and by how many tenge per resident did it exceed the lowest of the three?",
+  "gold": "Ashgrove | 2993",
+  "parsed": "Ashgrove | 2993.343",
+  "answered": true,
+  "correct": true,
+  "api_calls": 4,
+  "input_tokens": 5372,
+  "output_tokens": 414,
+  "cached_tokens": 4606,
+  "reasoning_tokens": 0,
+  "seconds": 6.586,
+  "final_text": "Ashgrove had the largest 2025 budget per resident:\n\n- Ossbridge: 175,497.127 tenge\n- Ashgrove: 178,490.470 tenge\n- Harrowfield: 177,600.541 tenge\n\nAshgrove exceeded the lowest, Ossbridge, by 2,993.343 tenge per resident. I used each district’s 2025 budget and population, converted budgets from million tenge to tenge, divided by population, and calculated the difference.\n\nANSWER: Ashgrove | 2993.343",
+  "calls": [
+    {
+      "input_tokens": 757,
+      "output_tokens": 175,
+      "cached_tokens": 0,
+      "reasoning_tokens": 0,
+      "seconds": 2.15,
+      "finish_reason": "tool_calls",
+      "round": 1
+    },
+    {
+      "input_tokens": 1390,
+      "output_tokens": 88,
+      "cached_tokens": 1387,
+      "reasoning_tokens": 0,
+      "seconds": 1.345,
+      "finish_reason": "tool_calls",
+      "round": 2
+    },
+    {
+      "input_tokens": 1576,
+      "output_tokens": 30,
+      "cached_tokens": 1573,
+      "reasoning_tokens": 0,
+      "seconds": 1.208,
+      "finish_reason": "tool_calls",
+      "round": 3
+    },
+    {
+      "input_tokens": 1649,
+      "output_tokens": 121,
+      "cached_tokens": 1646,
+      "reasoning_tokens": 0,
+      "seconds": 1.881,
+      "finish_reason": "stop",
+      "round": 4
+    }
+  ],
+  "log": {
+    "rounds": 4,
+    "tool_calls": [
+      {
+        "round": 1,
+        "id": "call_7icWW9ULda7XsJapUbaNv1bZ",
+        "name": "lookup",
+        "arguments": "{\"district\": \"Ossbridge\", \"field\": \"budget_million_tenge\", \"year\": 2025}",
+        "result": {
+          "district": "Ossbridge",
+          "field": "budget_million_tenge",
+          "year": 2025,
+          "unit": "million tenge",
+          "source": "NR-01",
+          "value": 9284.5,
+          "evidence": "Its budget for 2025 was set at 9,284.5 million tenge."
+        },
+        "seconds": 0.000232
+      },
+      {
+        "round": 1,
+        "id": "call_WfUwb0neQbJ9TERjtNHHy736",
+        "name": "lookup",
+        "arguments": "{\"district\": \"Ossbridge\", \"field\": \"population\", \"year\": 2025}",
+        "result": {
+          "district": "Ossbridge",
+          "field": "population",
+          "year": 2025,
+          "unit": "residents",
+          "source": "NR-01",
+          "value": 52904,
+          "evidence": "The 2025 census recorded 52,904 residents; the 2020 census had recorded 48,317."
+        },
+        "seconds": 0.000122
+      },
+      {
+        "round": 1,
+        "id": "call_SBcBSU2Gp2AdrkUMVjQGwDF3",
+        "name": "lookup",
+        "arguments": "{\"district\": \"Ashgrove\", \"field\": \"budget_million_tenge\", \"year\": 2025}",
+        "result": {
+          "district": "Ashgrove",
+          "field": "budget_million_tenge",
+          "year": 2025,
+          "unit": "million tenge",
+          "source": "NR-10",
+          "value": 10488.1,
+          "evidence": "Its budget for 2025 was set at 10,488.1 million tenge."
+        },
+        "seconds": 0.000176
+      },
+      {
+        "round": 1,
+        "id": "call_CCzHVSon3yNDlrOJkKKsXdG4",
+        "name": "lookup",
+        "arguments": "{\"district\": \"Ashgrove\", \"field\": \"population\", \"year\": 2025}",
+        "result": {
+          "district": "Ashgrove",
+          "field": "population",
+          "year": 2025,
+          "unit": "residents",
+          "source": "NR-10",
+          "value": 58760,
+          "evidence": "The 2025 census recorded 58,760 residents; the 2020 census had recorded 56,041."
+        },
+        "seconds": 0.000146
+      },
+      {
+        "round": 1,
+        "id": "call_dsV5Sai4XL7BIuWLuxWQO8PX",
+        "name": "lookup",
+        "arguments": "{\"district\": \"Harrowfield\", \"field\": \"budget_million_tenge\", \"year\": 2025}",
+        "result": {
+          "district": "Harrowfield",
+          "field": "budget_million_tenge",
+          "year": 2025,
+          "unit": "million tenge",
+          "source": "NR-07",
+          "value": 16021.7,
+          "evidence": "Its budget for 2025 was set at 16,021.7 million tenge."
+        },
+        "seconds": 0.00017
+      },
+      {
+        "round": 1,
+        "id": "call_V33iiq1XxDKbqxP7yWui3uJM",
+        "name": "lookup",
+        "arguments": "{\"district\": \"Harrowfield\", \"field\": \"population\", \"year\": 2025}",
+        "result": {
+          "district": "Harrowfield",
+          "field": "population",
+          "year": 2025,
+          "unit": "residents",
+          "source": "NR-07",
+          "value": 90212,
+          "evidence": "The 2025 census recorded 90,212 residents; the 2020 census had recorded 83,609."
+        },
+        "seconds": 0.00012
+      },
+      {
+        "round": 2,
+        "id": "call_5ezgpx1gd1ZPhqGiXHVlRFPQ",
+        "name": "calculate",
+        "arguments": "{\"expression\": \"9284.5*1000000/52904\"}",
+        "result": {
+          "expression": "9284.5*1000000/52904",
+          "result": 175497.12687131407
+        },
+        "seconds": 0.000187
+      },
+      {
+        "round": 2,
+        "id": "call_NqAj5SfpiMm43Gq0ExVQlgca",
+        "name": "calculate",
+        "arguments": "{\"expression\": \"10488.1*1000000/58760\"}",
+        "result": {
+          "expression": "10488.1*1000000/58760",
+          "result": 178490.46970728386
+        },
+        "seconds": 0.000155
+      },
+      {
+        "round": 2,
+        "id": "call_2KRtoUYjjjcfSTFm1NqD0FZ6",
+        "name": "calculate",
+        "arguments": "{\"expression\": \"16021.7*1000000/90212\"}",
+        "result": {
+          "expression": "16021.7*1000000/90212",
+          "result": 177600.54094798918
+        },
+        "seconds": 0.000116
+      },
+      {
+        "round": 3,
+        "id": "call_95be1Uvj5uOQmQluzOdVOfbY",
+        "name": "calculate",
+        "arguments": "{\"expression\":\"178490.46970728386-175497.12687131407\"}",
+        "result": {
+          "expression": "178490.46970728386-175497.12687131407",
+          "result": 2993.3428359697864
+        },
+        "seconds": 0.000262
+      }
+    ],
+    "messages": [
+      {
+        "role": "system",
+        "content": "Answer the question about the Nine Rivers Region. You have no documents; get every fact with the lookup tool and do every calculation with the calculate tool. Then explain briefly which facts and calculations you used.\n\nThe last line of your reply must be exactly:\nANSWER: <district name, or yes/no> | <number>\nWrite the number without units and without thousands separators. Do not round it to fewer than 3 decimal places unless it is a whole number."
+      },
+      {
+        "role": "user",
+        "content": "Of Ossbridge, Ashgrove and Harrowfield, which district had the largest 2025 budget per resident, and by how many tenge per resident did it exceed the lowest of the three?"
+      },
+      {
+        "role": "assistant",
+        "annotations": [],
+        "tool_calls": [
+          {
+            "id": "call_7icWW9ULda7XsJapUbaNv1bZ",
+            "function": {
+              "arguments": "{\"district\": \"Ossbridge\", \"field\": \"budget_million_tenge\", \"year\": 2025}",
+              "name": "lookup"
+            },
+            "type": "function"
+          },
+          {
+            "id": "call_WfUwb0neQbJ9TERjtNHHy736",
+            "function": {
+              "arguments": "{\"district\": \"Ossbridge\", \"field\": \"population\", \"year\": 2025}",
+              "name": "lookup"
+            },
+            "type": "function"
+          },
+          {
+            "id": "call_SBcBSU2Gp2AdrkUMVjQGwDF3",
+            "function": {
+              "arguments": "{\"district\": \"Ashgrove\", \"field\": \"budget_million_tenge\", \"year\": 2025}",
+              "name": "lookup"
+            },
+            "type": "function"
+          },
+          {
+            "id": "call_CCzHVSon3yNDlrOJkKKsXdG4",
+            "function": {
+              "arguments": "{\"district\": \"Ashgrove\", \"field\": \"population\", \"year\": 2025}",
+              "name": "lookup"
+            },
+            "type": "function"
+          },
+          {
+            "id": "call_dsV5Sai4XL7BIuWLuxWQO8PX",
+            "function": {
+              "arguments": "{\"district\": \"Harrowfield\", \"field\": \"budget_million_tenge\", \"year\": 2025}",
+              "name": "lookup"
+            },
+            "type": "function"
+          },
+          {
+            "id": "call_V33iiq1XxDKbqxP7yWui3uJM",
+            "function": {
+              "arguments": "{\"district\": \"Harrowfield\", \"field\": \"population\", \"year\": 2025}",
+              "name": "lookup"
+            },
+            "type": "function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_7icWW9ULda7XsJapUbaNv1bZ",
+        "content": "{\"district\": \"Ossbridge\", \"field\": \"budget_million_tenge\", \"year\": 2025, \"unit\": \"million tenge\", \"source\": \"NR-01\", \"value\": 9284.5, \"evidence\": \"Its budget for 2025 was set at 9,284.5 million tenge.\"}"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_WfUwb0neQbJ9TERjtNHHy736",
+        "content": "{\"district\": \"Ossbridge\", \"field\": \"population\", \"year\": 2025, \"unit\": \"residents\", \"source\": \"NR-01\", \"value\": 52904, \"evidence\": \"The 2025 census recorded 52,904 residents; the 2020 census had recorded 48,317.\"}"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_SBcBSU2Gp2AdrkUMVjQGwDF3",
+        "content": "{\"district\": \"Ashgrove\", \"field\": \"budget_million_tenge\", \"year\": 2025, \"unit\": \"million tenge\", \"source\": \"NR-10\", \"value\": 10488.1, \"evidence\": \"Its budget for 2025 was set at 10,488.1 million tenge.\"}"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_CCzHVSon3yNDlrOJkKKsXdG4",
+        "content": "{\"district\": \"Ashgrove\", \"field\": \"population\", \"year\": 2025, \"unit\": \"residents\", \"source\": \"NR-10\", \"value\": 58760, \"evidence\": \"The 2025 census recorded 58,760 residents; the 2020 census had recorded 56,041.\"}"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_dsV5Sai4XL7BIuWLuxWQO8PX",
+        "content": "{\"district\": \"Harrowfield\", \"field\": \"budget_million_tenge\", \"year\": 2025, \"unit\": \"million tenge\", \"source\": \"NR-07\", \"value\": 16021.7, \"evidence\": \"Its budget for 2025 was set at 16,021.7 million tenge.\"}"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_V33iiq1XxDKbqxP7yWui3uJM",
+        "content": "{\"district\": \"Harrowfield\", \"field\": \"population\", \"year\": 2025, \"unit\": \"residents\", \"source\": \"NR-07\", \"value\": 90212, \"evidence\": \"The 2025 census recorded 90,212 residents; the 2020 census had recorded 83,609.\"}"
+      },
+      {
+        "role": "assistant",
+        "annotations": [],
+        "tool_calls": [
+          {
+            "id": "call_5ezgpx1gd1ZPhqGiXHVlRFPQ",
+            "function": {
+              "arguments": "{\"expression\": \"9284.5*1000000/52904\"}",
+              "name": "calculate"
+            },
+            "type": "function"
+          },
+          {
+            "id": "call_NqAj5SfpiMm43Gq0ExVQlgca",
+            "function": {
+              "arguments": "{\"expression\": \"10488.1*1000000/58760\"}",
+              "name": "calculate"
+            },
+            "type": "function"
+          },
+          {
+            "id": "call_2KRtoUYjjjcfSTFm1NqD0FZ6",
+            "function": {
+              "arguments": "{\"expression\": \"16021.7*1000000/90212\"}",
+              "name": "calculate"
+            },
+            "type": "function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_5ezgpx1gd1ZPhqGiXHVlRFPQ",
+        "content": "{\"expression\": \"9284.5*1000000/52904\", \"result\": 175497.12687131407}"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_NqAj5SfpiMm43Gq0ExVQlgca",
+        "content": "{\"expression\": \"10488.1*1000000/58760\", \"result\": 178490.46970728386}"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_2KRtoUYjjjcfSTFm1NqD0FZ6",
+        "content": "{\"expression\": \"16021.7*1000000/90212\", \"result\": 177600.54094798918}"
+      },
+      {
+        "role": "assistant",
+        "annotations": [],
+        "tool_calls": [
+          {
+            "id": "call_95be1Uvj5uOQmQluzOdVOfbY",
+            "function": {
+              "arguments": "{\"expression\":\"178490.46970728386-175497.12687131407\"}",
+              "name": "calculate"
+            },
+            "type": "function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_95be1Uvj5uOQmQluzOdVOfbY",
+        "content": "{\"expression\": \"178490.46970728386-175497.12687131407\", \"result\": 2993.3428359697864}"
+      },
+      {
+        "content": "Ashgrove had the largest 2025 budget per resident:\n\n- Ossbridge: 175,497.127 tenge\n- Ashgrove: 178,490.470 tenge\n- Harrowfield: 177,600.541 tenge\n\nAshgrove exceeded the lowest, Ossbridge, by 2,993.343 tenge per resident. I used each district’s 2025 budget and population, converted budgets from million tenge to tenge, divided by population, and calculated the difference.\n\nANSWER: Ashgrove | 2993.343",
+        "role": "assistant",
+        "annotations": []
+      }
+    ]
+  }
+}

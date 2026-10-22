@@ -1,0 +1,278 @@
+{
+  "id": "Q-12",
+  "strategy": "S3",
+  "question": "Which district's 2025 budget works out higher per school pupil, Harrowfield or Tarnvale, and by how many thousand tenge per pupil?",
+  "gold": "Tarnvale | 64.4",
+  "parsed": "Tarnvale | 64.392",
+  "answered": true,
+  "correct": true,
+  "api_calls": 4,
+  "input_tokens": 4773,
+  "output_tokens": 344,
+  "cached_tokens": 2538,
+  "reasoning_tokens": 0,
+  "seconds": 6.539,
+  "final_text": "Tarnvale works out higher: its budget is approximately **64.392 thousand tenge more per pupil** than Harrowfield’s.\n\nI used the 2025 budgets of 16,021.7 million tenge (Harrowfield) and 12,960.3 million tenge (Tarnvale), with 13,904 and 10,652 pupils respectively. The calculation was each budget × 1,000 divided by pupils, then Tarnvale minus Harrowfield.\n\nANSWER: Tarnvale | 64.392",
+  "calls": [
+    {
+      "input_tokens": 747,
+      "output_tokens": 119,
+      "cached_tokens": 0,
+      "reasoning_tokens": 0,
+      "seconds": 1.713,
+      "finish_reason": "tool_calls",
+      "round": 1
+    },
+    {
+      "input_tokens": 1148,
+      "output_tokens": 75,
+      "cached_tokens": 0,
+      "reasoning_tokens": 0,
+      "seconds": 1.466,
+      "finish_reason": "tool_calls",
+      "round": 2
+    },
+    {
+      "input_tokens": 1396,
+      "output_tokens": 38,
+      "cached_tokens": 1145,
+      "reasoning_tokens": 0,
+      "seconds": 1.502,
+      "finish_reason": "tool_calls",
+      "round": 3
+    },
+    {
+      "input_tokens": 1482,
+      "output_tokens": 112,
+      "cached_tokens": 1393,
+      "reasoning_tokens": 0,
+      "seconds": 1.856,
+      "finish_reason": "stop",
+      "round": 4
+    }
+  ],
+  "log": {
+    "rounds": 4,
+    "tool_calls": [
+      {
+        "round": 1,
+        "id": "call_4BFwUMT9o3672mGyFDnJ1FHe",
+        "name": "lookup",
+        "arguments": "{\"district\": \"Harrowfield\", \"field\": \"budget\", \"year\": 2025}",
+        "result": {
+          "error": "unknown field 'budget'; valid fields: population, area_km2, budget_million_tenge, water_use_megalitres, schools, pupils, paved_road_km, founded_year, water_tariff_tenge_per_m3"
+        },
+        "seconds": 6.1e-05
+      },
+      {
+        "round": 1,
+        "id": "call_FBPF0aTMg2XxH4P77VstPEnh",
+        "name": "lookup",
+        "arguments": "{\"district\": \"Harrowfield\", \"field\": \"pupils\", \"year\": 2025}",
+        "result": {
+          "district": "Harrowfield",
+          "field": "pupils",
+          "year": 2025,
+          "unit": "pupils (2025/26)",
+          "source": "NR-07",
+          "value": 13904,
+          "evidence": "There are 36 schools in the district, attended by 13,904 pupils in 2025/26."
+        },
+        "seconds": 0.000174
+      },
+      {
+        "round": 1,
+        "id": "call_WDfDlwC9SzODqrPV045IEK2Q",
+        "name": "lookup",
+        "arguments": "{\"district\": \"Tarnvale\", \"field\": \"budget\", \"year\": 2025}",
+        "result": {
+          "error": "unknown field 'budget'; valid fields: population, area_km2, budget_million_tenge, water_use_megalitres, schools, pupils, paved_road_km, founded_year, water_tariff_tenge_per_m3"
+        },
+        "seconds": 2.9e-05
+      },
+      {
+        "round": 1,
+        "id": "call_aBZpJZDi629hY4pdxztu95i1",
+        "name": "lookup",
+        "arguments": "{\"district\": \"Tarnvale\", \"field\": \"pupils\", \"year\": 2025}",
+        "result": {
+          "district": "Tarnvale",
+          "field": "pupils",
+          "year": 2025,
+          "unit": "pupils (2025/26)",
+          "source": "NR-03",
+          "value": 10652,
+          "evidence": "The district runs 29 schools with 10,652 pupils enrolled in the 2025/26 school year."
+        },
+        "seconds": 0.000124
+      },
+      {
+        "round": 2,
+        "id": "call_54ZbdqSXDjOL0DolCctAS5rM",
+        "name": "lookup",
+        "arguments": "{\"district\": \"Harrowfield\", \"field\": \"budget_million_tenge\", \"year\": 2025}",
+        "result": {
+          "district": "Harrowfield",
+          "field": "budget_million_tenge",
+          "year": 2025,
+          "unit": "million tenge",
+          "source": "NR-07",
+          "value": 16021.7,
+          "evidence": "Its budget for 2025 was set at 16,021.7 million tenge."
+        },
+        "seconds": 0.000235
+      },
+      {
+        "round": 2,
+        "id": "call_pIoeunbRuv3DoPF7uf58ZtD1",
+        "name": "lookup",
+        "arguments": "{\"district\": \"Tarnvale\", \"field\": \"budget_million_tenge\", \"year\": 2025}",
+        "result": {
+          "district": "Tarnvale",
+          "field": "budget_million_tenge",
+          "year": 2025,
+          "unit": "million tenge",
+          "source": "NR-03",
+          "value": 12960.3,
+          "evidence": "Its 2025 budget was 12,960.3 million tenge, and it maintains 944.7 km of paved road."
+        },
+        "seconds": 0.00035
+      },
+      {
+        "round": 3,
+        "id": "call_8r7Kk5M7Sjz98nGqdIqZOybo",
+        "name": "calculate",
+        "arguments": "{\"expression\":\"(16021.7*1000/13904)-(12960.3*1000/10652)\"}",
+        "result": {
+          "expression": "(16021.7*1000/13904)-(12960.3*1000/10652)",
+          "result": -64.39240085007577
+        },
+        "seconds": 0.000479
+      }
+    ],
+    "messages": [
+      {
+        "role": "system",
+        "content": "Answer the question about the Nine Rivers Region. You have no documents; get every fact with the lookup tool and do every calculation with the calculate tool. Then explain briefly which facts and calculations you used.\n\nThe last line of your reply must be exactly:\nANSWER: <district name, or yes/no> | <number>\nWrite the number without units and without thousands separators. Do not round it to fewer than 3 decimal places unless it is a whole number."
+      },
+      {
+        "role": "user",
+        "content": "Which district's 2025 budget works out higher per school pupil, Harrowfield or Tarnvale, and by how many thousand tenge per pupil?"
+      },
+      {
+        "role": "assistant",
+        "annotations": [],
+        "tool_calls": [
+          {
+            "id": "call_4BFwUMT9o3672mGyFDnJ1FHe",
+            "function": {
+              "arguments": "{\"district\": \"Harrowfield\", \"field\": \"budget\", \"year\": 2025}",
+              "name": "lookup"
+            },
+            "type": "function"
+          },
+          {
+            "id": "call_FBPF0aTMg2XxH4P77VstPEnh",
+            "function": {
+              "arguments": "{\"district\": \"Harrowfield\", \"field\": \"pupils\", \"year\": 2025}",
+              "name": "lookup"
+            },
+            "type": "function"
+          },
+          {
+            "id": "call_WDfDlwC9SzODqrPV045IEK2Q",
+            "function": {
+              "arguments": "{\"district\": \"Tarnvale\", \"field\": \"budget\", \"year\": 2025}",
+              "name": "lookup"
+            },
+            "type": "function"
+          },
+          {
+            "id": "call_aBZpJZDi629hY4pdxztu95i1",
+            "function": {
+              "arguments": "{\"district\": \"Tarnvale\", \"field\": \"pupils\", \"year\": 2025}",
+              "name": "lookup"
+            },
+            "type": "function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_4BFwUMT9o3672mGyFDnJ1FHe",
+        "content": "{\"error\": \"unknown field 'budget'; valid fields: population, area_km2, budget_million_tenge, water_use_megalitres, schools, pupils, paved_road_km, founded_year, water_tariff_tenge_per_m3\"}"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_FBPF0aTMg2XxH4P77VstPEnh",
+        "content": "{\"district\": \"Harrowfield\", \"field\": \"pupils\", \"year\": 2025, \"unit\": \"pupils (2025/26)\", \"source\": \"NR-07\", \"value\": 13904, \"evidence\": \"There are 36 schools in the district, attended by 13,904 pupils in 2025/26.\"}"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_WDfDlwC9SzODqrPV045IEK2Q",
+        "content": "{\"error\": \"unknown field 'budget'; valid fields: population, area_km2, budget_million_tenge, water_use_megalitres, schools, pupils, paved_road_km, founded_year, water_tariff_tenge_per_m3\"}"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_aBZpJZDi629hY4pdxztu95i1",
+        "content": "{\"district\": \"Tarnvale\", \"field\": \"pupils\", \"year\": 2025, \"unit\": \"pupils (2025/26)\", \"source\": \"NR-03\", \"value\": 10652, \"evidence\": \"The district runs 29 schools with 10,652 pupils enrolled in the 2025/26 school year.\"}"
+      },
+      {
+        "role": "assistant",
+        "annotations": [],
+        "tool_calls": [
+          {
+            "id": "call_54ZbdqSXDjOL0DolCctAS5rM",
+            "function": {
+              "arguments": "{\"district\": \"Harrowfield\", \"field\": \"budget_million_tenge\", \"year\": 2025}",
+              "name": "lookup"
+            },
+            "type": "function"
+          },
+          {
+            "id": "call_pIoeunbRuv3DoPF7uf58ZtD1",
+            "function": {
+              "arguments": "{\"district\": \"Tarnvale\", \"field\": \"budget_million_tenge\", \"year\": 2025}",
+              "name": "lookup"
+            },
+            "type": "function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_54ZbdqSXDjOL0DolCctAS5rM",
+        "content": "{\"district\": \"Harrowfield\", \"field\": \"budget_million_tenge\", \"year\": 2025, \"unit\": \"million tenge\", \"source\": \"NR-07\", \"value\": 16021.7, \"evidence\": \"Its budget for 2025 was set at 16,021.7 million tenge.\"}"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_pIoeunbRuv3DoPF7uf58ZtD1",
+        "content": "{\"district\": \"Tarnvale\", \"field\": \"budget_million_tenge\", \"year\": 2025, \"unit\": \"million tenge\", \"source\": \"NR-03\", \"value\": 12960.3, \"evidence\": \"Its 2025 budget was 12,960.3 million tenge, and it maintains 944.7 km of paved road.\"}"
+      },
+      {
+        "role": "assistant",
+        "annotations": [],
+        "tool_calls": [
+          {
+            "id": "call_8r7Kk5M7Sjz98nGqdIqZOybo",
+            "function": {
+              "arguments": "{\"expression\":\"(16021.7*1000/13904)-(12960.3*1000/10652)\"}",
+              "name": "calculate"
+            },
+            "type": "function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_8r7Kk5M7Sjz98nGqdIqZOybo",
+        "content": "{\"expression\": \"(16021.7*1000/13904)-(12960.3*1000/10652)\", \"result\": -64.39240085007577}"
+      },
+      {
+        "content": "Tarnvale works out higher: its budget is approximately **64.392 thousand tenge more per pupil** than Harrowfield’s.\n\nI used the 2025 budgets of 16,021.7 million tenge (Harrowfield) and 12,960.3 million tenge (Tarnvale), with 13,904 and 10,652 pupils respectively. The calculation was each budget × 1,000 divided by pupils, then Tarnvale minus Harrowfield.\n\nANSWER: Tarnvale | 64.392",
+        "role": "assistant",
+        "annotations": []
+      }
+    ]
+  }
+}

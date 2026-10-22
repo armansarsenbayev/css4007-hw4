@@ -1,0 +1,114 @@
+{
+  "settings": {
+    "model": "gpt-5.6-luna",
+    "temperature": 1.0,
+    "reasoning_effort": "none",
+    "k": 5,
+    "max_rounds": 8,
+    "price_in_per_1M": 0.2,
+    "price_out_per_1M": 1.2,
+    "vague_lookup": false,
+    "year_enum": [
+      2020,
+      2024,
+      2025
+    ],
+    "year_description": "Optional; leave it out to get the 2025 figure, which is what almost every question needs (2025 census population, 2025 budget, 2025 tariff). Send 2020 ONLY when the question explicitly asks about the 2020 census (e.g. growth between 2020 and 2025). Send 2024 ONLY when the question explicitly asks about the 2024 tariff.",
+    "lookup_description": "Get ONE official figure about ONE district of the Nine Rivers Region (or the regional water tariff). Uses only the current 2025 district profiles: archived 2019 profiles are never used and published correction notices are already applied. Returns the number at full precision, its unit, the id of the source document and the sentence it was read from. Water use is always returned in megalitres (converted if a profile uses cubic metres). Districts: Ossbridge, Ossford, Tarnvale, Kelmarsh, Brightwater, Stonecairn, Harrowfield, Lindenmoor, Redfen, Ashgrove, Millbrook, Coldharbour. Call once per (district, field); call it several times in parallel when you need several figures. Do not guess figures yourself.",
+    "questions": [
+      "Q-03",
+      "Q-05",
+      "Q-07",
+      "Q-08",
+      "Q-14",
+      "Q-17",
+      "Q-20"
+    ],
+    "started": "2026-10-23 03:35:06"
+  },
+  "S3": {
+    "questions": 7,
+    "correct": 7,
+    "unanswered": 0,
+    "api_calls": 25,
+    "input_tokens": 29979,
+    "output_tokens": 2300,
+    "cached_tokens": 14481,
+    "reasoning_tokens": 0,
+    "median_seconds": 16.32,
+    "total_seconds": 88.0,
+    "cost_usd": 0.0088,
+    "per_question": {
+      "Q-03": {
+        "correct": true,
+        "answered": true,
+        "parsed": "Lindenmoor | 5.34",
+        "gold": "Lindenmoor | 5.3",
+        "api_calls": 3,
+        "input_tokens": 3447,
+        "output_tokens": 322,
+        "seconds": 16.869
+      },
+      "Q-05": {
+        "correct": true,
+        "answered": true,
+        "parsed": "Coldharbour | 14235.314",
+        "gold": "Coldharbour | 14235",
+        "api_calls": 4,
+        "input_tokens": 4791,
+        "output_tokens": 337,
+        "seconds": 18.214
+      },
+      "Q-07": {
+        "correct": true,
+        "answered": true,
+        "parsed": "Coldharbour | 18.496",
+        "gold": "Coldharbour | 18.5",
+        "api_calls": 3,
+        "input_tokens": 3418,
+        "output_tokens": 323,
+        "seconds": 16.776
+      },
+      "Q-08": {
+        "correct": true,
+        "answered": true,
+        "parsed": "Brightwater | 72.45615",
+        "gold": "Brightwater | 72.46",
+        "api_calls": 3,
+        "input_tokens": 3140,
+        "output_tokens": 232,
+        "seconds": 16.315
+      },
+      "Q-14": {
+        "correct": true,
+        "answered": true,
+        "parsed": "Ashgrove | 4.852761",
+        "gold": "Ashgrove | 4.9",
+        "api_calls": 4,
+        "input_tokens": 4719,
+        "output_tokens": 322,
+        "seconds": 6.153
+      },
+      "Q-17": {
+        "correct": true,
+        "answered": true,
+        "parsed": "Harrowfield | 884.457",
+        "gold": "Harrowfield | 884",
+        "api_calls": 4,
+        "input_tokens": 5092,
+        "output_tokens": 364,
+        "seconds": 6.642
+      },
+      "Q-20": {
+        "correct": true,
+        "answered": true,
+        "parsed": "Ashgrove | 2993.343",
+        "gold": "Ashgrove | 2993",
+        "api_calls": 4,
+        "input_tokens": 5372,
+        "output_tokens": 400,
+        "seconds": 6.988
+      }
+    }
+  }
+}

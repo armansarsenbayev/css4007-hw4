@@ -1,0 +1,281 @@
+{
+  "id": "Q-03",
+  "strategy": "S3",
+  "question": "In 2025, which district's households used more water per resident per day, Lindenmoor or Kelmarsh, and by how many litres per resident per day?",
+  "gold": "Lindenmoor | 5.3",
+  "parsed": "Lindenmoor | 5.34",
+  "answered": true,
+  "correct": true,
+  "api_calls": 4,
+  "input_tokens": 4839,
+  "output_tokens": 319,
+  "cached_tokens": 3846,
+  "reasoning_tokens": 0,
+  "seconds": 13.959,
+  "final_text": "Lindenmoor households used more water: 202.893 litres per resident per day, compared with Kelmarsh’s 197.553. The difference was 5.340 litres per resident per day.\n\nI used each district’s 2025 household water use and population, converting megalitres to litres and dividing by 365 days and residents.\n\nANSWER: Lindenmoor | 5.340",
+  "calls": [
+    {
+      "input_tokens": 750,
+      "output_tokens": 125,
+      "cached_tokens": 0,
+      "reasoning_tokens": 0,
+      "seconds": 9.456,
+      "finish_reason": "tool_calls",
+      "round": 1
+    },
+    {
+      "input_tokens": 1238,
+      "output_tokens": 69,
+      "cached_tokens": 1235,
+      "reasoning_tokens": 0,
+      "seconds": 1.536,
+      "finish_reason": "tool_calls",
+      "round": 2
+    },
+    {
+      "input_tokens": 1379,
+      "output_tokens": 41,
+      "cached_tokens": 1235,
+      "reasoning_tokens": 0,
+      "seconds": 1.371,
+      "finish_reason": "tool_calls",
+      "round": 3
+    },
+    {
+      "input_tokens": 1472,
+      "output_tokens": 84,
+      "cached_tokens": 1376,
+      "reasoning_tokens": 0,
+      "seconds": 1.589,
+      "finish_reason": "stop",
+      "round": 4
+    }
+  ],
+  "log": {
+    "rounds": 4,
+    "tool_calls": [
+      {
+        "round": 1,
+        "id": "call_p41ZzLZA9xBqsFihcv9J1IZa",
+        "name": "lookup",
+        "arguments": "{\"district\": \"Lindenmoor\", \"field\": \"water_use_megalitres\", \"year\": 2025}",
+        "result": {
+          "district": "Lindenmoor",
+          "field": "water_use_megalitres",
+          "year": 2025,
+          "unit": "megalitres",
+          "source": "NR-08",
+          "value": 2151.4,
+          "evidence": "Households used 2,151,400 cubic metres of water during 2025, and the district's 2025 budget amounted to 4,870.4 million tenge.",
+          "note": "profile gives 2,151,400 cubic metres; converted to megalitres (1 ML = 1,000 m3)"
+        },
+        "seconds": 0.002044
+      },
+      {
+        "round": 1,
+        "id": "call_e587EtxDQuMf6zKXLiPhpyRR",
+        "name": "lookup",
+        "arguments": "{\"district\": \"Lindenmoor\", \"field\": \"population\", \"year\": 2025}",
+        "result": {
+          "district": "Lindenmoor",
+          "field": "population",
+          "year": 2025,
+          "unit": "residents",
+          "source": "NR-08",
+          "value": 29051,
+          "evidence": "Census population: 27,736 in 2020 and 29,051 in 2025."
+        },
+        "seconds": 0.001029
+      },
+      {
+        "round": 1,
+        "id": "call_WuInFKP11gJY3J5v5Elthgce",
+        "name": "lookup",
+        "arguments": "{\"district\": \"Kelmarsh\", \"field\": \"water_use_megalitres\", \"year\": 2025}",
+        "result": {
+          "district": "Kelmarsh",
+          "field": "water_use_megalitres",
+          "year": 2025,
+          "unit": "megalitres",
+          "source": "NR-04",
+          "value": 1739.0,
+          "evidence": "Household water use in 2025 came to 1,739 megalitres."
+        },
+        "seconds": 0.0003
+      },
+      {
+        "round": 1,
+        "id": "call_eYxzXSmroelgkkymVUpSERuM",
+        "name": "lookup",
+        "arguments": "{\"district\": \"Kelmarsh\", \"field\": \"population\", \"year\": 2025}",
+        "result": {
+          "district": "Kelmarsh",
+          "field": "population",
+          "year": 2025,
+          "unit": "residents",
+          "source": "NR-04",
+          "value": 24117,
+          "evidence": "The 2025 census recorded 24,117 residents; the 2020 census had recorded 22,845."
+        },
+        "seconds": 0.000173
+      },
+      {
+        "round": 2,
+        "id": "call_BNQIIV1LU2TXOoARKOaT1VGA",
+        "name": "calculate",
+        "arguments": "{\"expression\": \"2151.4*1000000/(29051*365)\"}",
+        "result": {
+          "expression": "2151.4*1000000/(29051*365)",
+          "result": 202.89306995774555
+        },
+        "seconds": 0.00054
+      },
+      {
+        "round": 2,
+        "id": "call_q8y2dyVZzbDal6sQlHQiu3PA",
+        "name": "calculate",
+        "arguments": "{\"expression\": \"1739*1000000/(24117*365)\"}",
+        "result": {
+          "expression": "1739*1000000/(24117*365)",
+          "result": 197.55291129260834
+        },
+        "seconds": 0.000405
+      },
+      {
+        "round": 3,
+        "id": "call_Lom2uwsdCVtjTyyexfYUfa9Y",
+        "name": "calculate",
+        "arguments": "{\"expression\":\"2151.4*1000000/(29051*365)-1739*1000000/(24117*365)\"}",
+        "result": {
+          "expression": "2151.4*1000000/(29051*365)-1739*1000000/(24117*365)",
+          "result": 5.34015866513721
+        },
+        "seconds": 0.000679
+      }
+    ],
+    "messages": [
+      {
+        "role": "system",
+        "content": "Answer the question about the Nine Rivers Region. You have no documents; get every fact with the lookup tool and do every calculation with the calculate tool. Then explain briefly which facts and calculations you used.\n\nThe last line of your reply must be exactly:\nANSWER: <district name, or yes/no> | <number>\nWrite the number without units and without thousands separators. Do not round it to fewer than 3 decimal places unless it is a whole number."
+      },
+      {
+        "role": "user",
+        "content": "In 2025, which district's households used more water per resident per day, Lindenmoor or Kelmarsh, and by how many litres per resident per day?"
+      },
+      {
+        "role": "assistant",
+        "annotations": [],
+        "tool_calls": [
+          {
+            "id": "call_p41ZzLZA9xBqsFihcv9J1IZa",
+            "function": {
+              "arguments": "{\"district\": \"Lindenmoor\", \"field\": \"water_use_megalitres\", \"year\": 2025}",
+              "name": "lookup"
+            },
+            "type": "function"
+          },
+          {
+            "id": "call_e587EtxDQuMf6zKXLiPhpyRR",
+            "function": {
+              "arguments": "{\"district\": \"Lindenmoor\", \"field\": \"population\", \"year\": 2025}",
+              "name": "lookup"
+            },
+            "type": "function"
+          },
+          {
+            "id": "call_WuInFKP11gJY3J5v5Elthgce",
+            "function": {
+              "arguments": "{\"district\": \"Kelmarsh\", \"field\": \"water_use_megalitres\", \"year\": 2025}",
+              "name": "lookup"
+            },
+            "type": "function"
+          },
+          {
+            "id": "call_eYxzXSmroelgkkymVUpSERuM",
+            "function": {
+              "arguments": "{\"district\": \"Kelmarsh\", \"field\": \"population\", \"year\": 2025}",
+              "name": "lookup"
+            },
+            "type": "function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_p41ZzLZA9xBqsFihcv9J1IZa",
+        "content": "{\"district\": \"Lindenmoor\", \"field\": \"water_use_megalitres\", \"year\": 2025, \"unit\": \"megalitres\", \"source\": \"NR-08\", \"value\": 2151.4, \"evidence\": \"Households used 2,151,400 cubic metres of water during 2025, and the district's 2025 budget amounted to 4,870.4 million tenge.\", \"note\": \"profile gives 2,151,400 cubic metres; converted to megalitres (1 ML = 1,000 m3)\"}"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_e587EtxDQuMf6zKXLiPhpyRR",
+        "content": "{\"district\": \"Lindenmoor\", \"field\": \"population\", \"year\": 2025, \"unit\": \"residents\", \"source\": \"NR-08\", \"value\": 29051, \"evidence\": \"Census population: 27,736 in 2020 and 29,051 in 2025.\"}"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_WuInFKP11gJY3J5v5Elthgce",
+        "content": "{\"district\": \"Kelmarsh\", \"field\": \"water_use_megalitres\", \"year\": 2025, \"unit\": \"megalitres\", \"source\": \"NR-04\", \"value\": 1739.0, \"evidence\": \"Household water use in 2025 came to 1,739 megalitres.\"}"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_eYxzXSmroelgkkymVUpSERuM",
+        "content": "{\"district\": \"Kelmarsh\", \"field\": \"population\", \"year\": 2025, \"unit\": \"residents\", \"source\": \"NR-04\", \"value\": 24117, \"evidence\": \"The 2025 census recorded 24,117 residents; the 2020 census had recorded 22,845.\"}"
+      },
+      {
+        "role": "assistant",
+        "annotations": [],
+        "tool_calls": [
+          {
+            "id": "call_BNQIIV1LU2TXOoARKOaT1VGA",
+            "function": {
+              "arguments": "{\"expression\": \"2151.4*1000000/(29051*365)\"}",
+              "name": "calculate"
+            },
+            "type": "function"
+          },
+          {
+            "id": "call_q8y2dyVZzbDal6sQlHQiu3PA",
+            "function": {
+              "arguments": "{\"expression\": \"1739*1000000/(24117*365)\"}",
+              "name": "calculate"
+            },
+            "type": "function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_BNQIIV1LU2TXOoARKOaT1VGA",
+        "content": "{\"expression\": \"2151.4*1000000/(29051*365)\", \"result\": 202.89306995774555}"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_q8y2dyVZzbDal6sQlHQiu3PA",
+        "content": "{\"expression\": \"1739*1000000/(24117*365)\", \"result\": 197.55291129260834}"
+      },
+      {
+        "role": "assistant",
+        "annotations": [],
+        "tool_calls": [
+          {
+            "id": "call_Lom2uwsdCVtjTyyexfYUfa9Y",
+            "function": {
+              "arguments": "{\"expression\":\"2151.4*1000000/(29051*365)-1739*1000000/(24117*365)\"}",
+              "name": "calculate"
+            },
+            "type": "function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_Lom2uwsdCVtjTyyexfYUfa9Y",
+        "content": "{\"expression\": \"2151.4*1000000/(29051*365)-1739*1000000/(24117*365)\", \"result\": 5.34015866513721}"
+      },
+      {
+        "content": "Lindenmoor households used more water: 202.893 litres per resident per day, compared with Kelmarsh’s 197.553. The difference was 5.340 litres per resident per day.\n\nI used each district’s 2025 household water use and population, converting megalitres to litres and dividing by 365 days and residents.\n\nANSWER: Lindenmoor | 5.340",
+        "role": "assistant",
+        "annotations": []
+      }
+    ]
+  }
+}

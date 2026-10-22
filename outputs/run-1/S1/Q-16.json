@@ -1,0 +1,29 @@
+{
+  "id": "Q-16",
+  "strategy": "S1",
+  "question": "Is the combined area of Ossbridge and Ossford larger than the area of Tarnvale, and by how many square kilometres do they differ?",
+  "gold": "yes | 23.9",
+  "parsed": "yes | 23.9",
+  "answered": true,
+  "correct": true,
+  "api_calls": 1,
+  "input_tokens": 2188,
+  "output_tokens": 53,
+  "cached_tokens": 2153,
+  "reasoning_tokens": 0,
+  "seconds": 1.526,
+  "final_text": "Yes. Ossbridge and Ossford together cover 2,130.8 square kilometres, compared with Tarnvale’s 2,106.9 square kilometres, a difference of 23.9 square kilometres.\n\nANSWER: yes | 23.900",
+  "calls": [
+    {
+      "input_tokens": 2188,
+      "output_tokens": 53,
+      "cached_tokens": 2153,
+      "reasoning_tokens": 0,
+      "seconds": 1.526,
+      "finish_reason": "stop"
+    }
+  ],
+  "log": {
+    "reply": "Yes. Ossbridge and Ossford together cover 2,130.8 square kilometres, compared with Tarnvale’s 2,106.9 square kilometres, a difference of 23.9 square kilometres.\n\nANSWER: yes | 23.900"
+  }
+}

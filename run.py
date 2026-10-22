@@ -15,7 +15,8 @@ from pathlib import Path
 
 import strategies as S
 from score import is_correct, parse_answer
-from tools import VAGUE_LOOKUP_DESCRIPTION, LOOKUP_DESCRIPTION
+from tools import (VAGUE_LOOKUP_DESCRIPTION, LOOKUP_DESCRIPTION, YEAR_ENUM_V1, YEAR_ENUM_V2,
+                   YEAR_DESCRIPTION_V1, YEAR_DESCRIPTION_V2)
 
 ROOT = Path(__file__).parent
 OUT = ROOT / "outputs"
@@ -79,6 +80,10 @@ def main():
     ap.add_argument("--strategies", default="S1,S2,S3")
     ap.add_argument("--questions", default="", help="comma-separated ids; default all")
     ap.add_argument("--vague", action="store_true", help="S3 with a one-line lookup description")
+    ap.add_argument("--enum-v2", action="store_true",
+                    help="S3 with the lookup year enum ordered 2025, 2024, 2020")
+    ap.add_argument("--year-v2", action="store_true",
+                    help="S3 with the rewritten description of the lookup year parameter")
     ap.add_argument("--workers", type=int, default=4, help="questions run in parallel")
     args = ap.parse_args()
 
@@ -87,12 +92,15 @@ def main():
         keep = set(args.questions.split(","))
         questions = [q for q in questions if q["id"] in keep]
 
-    extra = {"lookup_description": VAGUE_LOOKUP_DESCRIPTION if args.vague else LOOKUP_DESCRIPTION}
+    extra = {"lookup_description": VAGUE_LOOKUP_DESCRIPTION if args.vague else LOOKUP_DESCRIPTION,
+             "year_enum": YEAR_ENUM_V2 if args.enum_v2 else YEAR_ENUM_V1,
+             "year_description": YEAR_DESCRIPTION_V2 if args.year_v2 else YEAR_DESCRIPTION_V1}
     out_dir = OUT / f"run-{args.run}"
     settings = {"model": S.MODEL, "temperature": S.TEMPERATURE,
                 "reasoning_effort": S.REASONING_EFFORT, "k": S.K,
                 "max_rounds": S.MAX_ROUNDS, "price_in_per_1M": S.PRICE_IN * 1e6,
-                "price_out_per_1M": S.PRICE_OUT * 1e6, "vague_lookup": args.vague,
+                "price_out_per_1M": S.PRICE_OUT * 1e6, "vague_lookup": args.vague, "year_enum": extra["year_enum"],
+                "year_description": extra["year_description"],
                 "lookup_description": extra["lookup_description"],
                 "questions": [q["id"] for q in questions],
                 "started": time.strftime("%Y-%m-%d %H:%M:%S")}

@@ -1,0 +1,74 @@
+{
+  "id": "Q-08",
+  "strategy": "S2",
+  "question": "At the 2025 household water tariff, whose households paid more for water in 2025, Brightwater's or Millbrook's, and by how many million tenge?",
+  "gold": "Brightwater | 72.46",
+  "parsed": "brightwater | 72.04",
+  "answered": true,
+  "correct": false,
+  "api_calls": 5,
+  "input_tokens": 11025,
+  "output_tokens": 1033,
+  "cached_tokens": 10970,
+  "reasoning_tokens": 0,
+  "seconds": 2.566,
+  "final_text": "ANSWER: brightwater | 72.04",
+  "calls": [
+    {
+      "input_tokens": 2205,
+      "output_tokens": 233,
+      "cached_tokens": 2202,
+      "reasoning_tokens": 0,
+      "seconds": 2.544,
+      "finish_reason": "stop"
+    },
+    {
+      "input_tokens": 2205,
+      "output_tokens": 178,
+      "cached_tokens": 2162,
+      "reasoning_tokens": 0,
+      "seconds": 2.167,
+      "finish_reason": "stop"
+    },
+    {
+      "input_tokens": 2205,
+      "output_tokens": 178,
+      "cached_tokens": 2202,
+      "reasoning_tokens": 0,
+      "seconds": 2.566,
+      "finish_reason": "stop"
+    },
+    {
+      "input_tokens": 2205,
+      "output_tokens": 193,
+      "cached_tokens": 2202,
+      "reasoning_tokens": 0,
+      "seconds": 2.161,
+      "finish_reason": "stop"
+    },
+    {
+      "input_tokens": 2205,
+      "output_tokens": 251,
+      "cached_tokens": 2202,
+      "reasoning_tokens": 0,
+      "seconds": 2.55,
+      "finish_reason": "stop"
+    }
+  ],
+  "log": {
+    "samples": [
+      "Facts used:\n- Brightwater household water use: 3,315 megalitres.\n- Millbrook household water use: 2,806 megalitres.\n- Tariff: 142.35 tenge per cubic metre.\n- 1 megalitre = 1,000 cubic metres.\n\nCalculations:\n- Brightwater: 3,315 × 1,000 × 142.35 = 471,470,250 tenge = 471.47025 million tenge.\n- Millbrook: 2,806 × 1,000 × 142.35 = 399,?  \n  2,806 × 142,350 = 399,?  \n  142,350 × 2,800 = 398,580,000  \n  142,350 × 6 = 854,100  \n  Total = 399,434,100 tenge = 399.4341 million tenge.\n- Difference: 471.47025 − 399.4341 = 72.03615 million tenge.\n\nANSWER: Brightwater | 72.03615",
+      "Facts used:\n- Brightwater household water use: 3,315 megalitres.\n- Millbrook household water use: 2,806 megalitres.\n- One megalitre = 1,000 cubic metres.\n- 2025 tariff = 142.35 tenge per cubic metre.\n\nCalculations:\n- Brightwater: 3,315 × 1,000 × 142.35 = 471,470,250 tenge = 471.47025 million tenge.\n- Millbrook: 2,806 × 1,000 × 142.35 = 399,434,100 tenge = 399.4341 million tenge.\n- Difference: 471.47025 − 399.4341 = 72.03615 million tenge.\n\nANSWER: Brightwater | 72.03615",
+      "Facts used:\n- Brightwater household water use: 3,315 megalitres.\n- Millbrook household water use: 2,806 megalitres.\n- Tariff: 142.35 tenge per cubic metre.\n- 1 megalitre = 1,000 cubic metres.\n\nDifference in water use:\n3,315 − 2,806 = 509 megalitres  \n509 × 1,000 = 509,000 cubic metres\n\nDifference in payment:\n509,000 × 142.35 = 72,459,150 tenge\n\nConvert to million tenge:\n72,459,150 ÷ 1,000,000 = 72.45915 million tenge\n\nBrightwater's households paid more by 72.45915 million tenge.\n\nANSWER: Brightwater | 72.45915",
+      "Facts used:\n- Brightwater household water use: 3,315 megalitres.\n- Millbrook household water use: 2,806 megalitres.\n- One megalitre = 1,000 cubic metres.\n- 2025 tariff: 142.35 tenge per cubic metre.\n\nCalculations:\n- Brightwater: 3,315 × 1,000 × 142.35 = 471,470,250 tenge = 471.47025 million tenge.\n- Millbrook: 2,806 × 1,000 × 142.35 = 399,674,100 tenge = 399.6741 million tenge.\n- Difference: 471.47025 − 399.6741 = 71.79615 million tenge.\n\nBrightwater households paid more by 71.79615 million tenge.\n\nANSWER: Brightwater | 71.79615",
+      "Facts used:\n- Brightwater household water use: 3,315 megalitres.\n- Millbrook household water use: 2,806 megalitres.\n- 1 megalitre = 1,000 cubic metres.\n- 2025 tariff: 142.35 tenge per cubic metre.\n\nCalculations:\n- Brightwater cost = 3,315 × 1,000 × 142.35 = 471,590,250 tenge.\n- Millbrook cost = 2,806 × 1,000 × 142.35 = 399,?  \n  2,806 × 142,350 = 399,?  \n  142,350 × 2,800 = 398,580,000  \n  142,350 × 6 = 854,100  \n  Total = 399,434,100 tenge.\n- Difference = 471,590,250 − 399,434,100 = 72,156,150 tenge.\n- In million tenge: 72,156,150 ÷ 1,000,000 = 72.15615 million tenge.\n\nANSWER: Brightwater | 72.15615"
+    ],
+    "votes": {
+      "brightwater | 72.04": 2,
+      "brightwater | 72.46": 1,
+      "brightwater | 71.8": 1,
+      "brightwater | 72.16": 1
+    },
+    "winner_count": 2
+  }
+}

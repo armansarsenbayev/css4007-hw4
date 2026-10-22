@@ -1,0 +1,29 @@
+{
+  "id": "Q-07",
+  "strategy": "S1",
+  "question": "Which district has more paved road per 1,000 residents in 2025, Coldharbour or Stonecairn, and by how many km per 1,000 residents?",
+  "gold": "Coldharbour | 18.5",
+  "parsed": "Coldharbour | 16.295",
+  "answered": true,
+  "correct": false,
+  "api_calls": 1,
+  "input_tokens": 2198,
+  "output_tokens": 41,
+  "cached_tokens": 2153,
+  "reasoning_tokens": 0,
+  "seconds": 1.374,
+  "final_text": "Coldharbour has more paved road per 1,000 residents. Difference: 16.295 km per 1,000 residents.\n\nANSWER: Coldharbour | 16.295",
+  "calls": [
+    {
+      "input_tokens": 2198,
+      "output_tokens": 41,
+      "cached_tokens": 2153,
+      "reasoning_tokens": 0,
+      "seconds": 1.374,
+      "finish_reason": "stop"
+    }
+  ],
+  "log": {
+    "reply": "Coldharbour has more paved road per 1,000 residents. Difference: 16.295 km per 1,000 residents.\n\nANSWER: Coldharbour | 16.295"
+  }
+}

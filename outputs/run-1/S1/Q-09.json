@@ -1,0 +1,29 @@
+{
+  "id": "Q-09",
+  "strategy": "S1",
+  "question": "Which district has the higher population density in 2025, Brightwater or Millbrook, and by how many residents per square kilometre?",
+  "gold": "Millbrook | 0.6",
+  "parsed": "Brightwater | 2.17",
+  "answered": true,
+  "correct": false,
+  "api_calls": 1,
+  "input_tokens": 2188,
+  "output_tokens": 30,
+  "cached_tokens": 2185,
+  "reasoning_tokens": 0,
+  "seconds": 1.536,
+  "final_text": "Brightwater has the higher population density by 2.17 residents per square kilometre.\n\nANSWER: Brightwater | 2.170",
+  "calls": [
+    {
+      "input_tokens": 2188,
+      "output_tokens": 30,
+      "cached_tokens": 2185,
+      "reasoning_tokens": 0,
+      "seconds": 1.536,
+      "finish_reason": "stop"
+    }
+  ],
+  "log": {
+    "reply": "Brightwater has the higher population density by 2.17 residents per square kilometre.\n\nANSWER: Brightwater | 2.170"
+  }
+}

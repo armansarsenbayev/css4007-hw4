@@ -1,0 +1,41 @@
+============================= test session starts =============================
+platform win32 -- Python 3.11.1, pytest-9.1.1, pluggy-1.7.0 -- C:\Users\Admin\css4007-hw4\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Admin\css4007-hw4
+plugins: anyio-4.15.1
+collecting ... collected 32 items
+
+tests/test_tools.py::test_lookup_finds_2025_population PASSED            [  3%]
+tests/test_tools.py::test_lookup_2020_population PASSED                  [  6%]
+tests/test_tools.py::test_lookup_misspelled_name_suggests_but_does_not_guess PASSED [  9%]
+tests/test_tools.py::test_lookup_similar_names_are_kept_apart PASSED     [ 12%]
+tests/test_tools.py::test_lookup_ambiguous_prefix_is_an_error PASSED     [ 15%]
+tests/test_tools.py::test_lookup_ignores_archived_profiles[Tarnvale-population-71388-65030] PASSED [ 18%]
+tests/test_tools.py::test_lookup_ignores_archived_profiles[Tarnvale-water_use_megalitres-5207-4980] PASSED [ 21%]
+tests/test_tools.py::test_lookup_ignores_archived_profiles[Kelmarsh-schools-11-10] PASSED [ 25%]
+tests/test_tools.py::test_lookup_ignores_archived_profiles[Kelmarsh-pupils-3268-2944] PASSED [ 28%]
+tests/test_tools.py::test_lookup_refuses_archived_year PASSED            [ 31%]
+tests/test_tools.py::test_lookup_applies_correction_notice PASSED        [ 34%]
+tests/test_tools.py::test_lookup_converts_cubic_metres_to_megalitres PASSED [ 37%]
+tests/test_tools.py::test_lookup_water_tariff PASSED                     [ 40%]
+tests/test_tools.py::test_lookup_bad_inputs_never_crash PASSED           [ 43%]
+tests/test_tools.py::test_lookup_result_is_short PASSED                  [ 46%]
+tests/test_tools.py::test_calculate_multiplication PASSED                [ 50%]
+tests/test_tools.py::test_calculate_q09_expression PASSED                [ 53%]
+tests/test_tools.py::test_calculate_refuses_dangerous_input_quickly[__import__('os').system('echo hi')] PASSED [ 56%]
+tests/test_tools.py::test_calculate_refuses_dangerous_input_quickly[(1).__class__] PASSED [ 59%]
+tests/test_tools.py::test_calculate_refuses_dangerous_input_quickly[9**9**9] PASSED [ 62%]
+tests/test_tools.py::test_calculate_refuses_non_arithmetic[open('x')] PASSED [ 65%]
+tests/test_tools.py::test_calculate_refuses_non_arithmetic[x + 1] PASSED [ 68%]
+tests/test_tools.py::test_calculate_refuses_non_arithmetic[[1, 2]] PASSED [ 71%]
+tests/test_tools.py::test_calculate_refuses_non_arithmetic['a' * 3] PASSED [ 75%]
+tests/test_tools.py::test_calculate_refuses_non_arithmetic[lambda: 1] PASSED [ 78%]
+tests/test_tools.py::test_calculate_refuses_non_arithmetic[True + 1] PASSED [ 81%]
+tests/test_tools.py::test_calculate_refuses_non_arithmetic[(1).__class__.__bases__[0].__subclasses__()] PASSED [ 84%]
+tests/test_tools.py::test_calculate_division_by_zero PASSED              [ 87%]
+tests/test_tools.py::test_calculate_large_numbers PASSED                 [ 90%]
+tests/test_tools.py::test_calculate_syntax_errors_and_commas PASSED      [ 93%]
+tests/test_tools.py::test_calculate_precedence_and_unary PASSED          [ 96%]
+tests/test_tools.py::test_run_tool_validates_json_arguments PASSED       [100%]
+
+============================= 32 passed in 0.61s ==============================

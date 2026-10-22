@@ -1,0 +1,29 @@
+{
+  "id": "Q-15",
+  "strategy": "S1",
+  "question": "Which district has more pupils per school in 2025/26, Kelmarsh or Redfen, and by how many pupils per school?",
+  "gold": "Redfen | 17.61",
+  "parsed": "Redfen | 17.609",
+  "answered": true,
+  "correct": true,
+  "api_calls": 1,
+  "input_tokens": 2189,
+  "output_tokens": 64,
+  "cached_tokens": 2186,
+  "reasoning_tokens": 0,
+  "seconds": 1.601,
+  "final_text": "Redfen has more pupils per school: 314.700 − 296.? Wait compute Kelmarsh 3268/11=297.0909; Redfen 3147/10=314.7; difference 17.6091.\n\nANSWER: Redfen | 17.609",
+  "calls": [
+    {
+      "input_tokens": 2189,
+      "output_tokens": 64,
+      "cached_tokens": 2186,
+      "reasoning_tokens": 0,
+      "seconds": 1.6,
+      "finish_reason": "stop"
+    }
+  ],
+  "log": {
+    "reply": "Redfen has more pupils per school: 314.700 − 296.? Wait compute Kelmarsh 3268/11=297.0909; Redfen 3147/10=314.7; difference 17.6091.\n\nANSWER: Redfen | 17.609"
+  }
+}

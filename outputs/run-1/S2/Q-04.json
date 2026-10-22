@@ -1,0 +1,71 @@
+{
+  "id": "Q-04",
+  "strategy": "S2",
+  "question": "Which district has more pupils per school in 2025/26, Ashgrove or Millbrook, and by how many pupils per school?",
+  "gold": "Millbrook | 2.59",
+  "parsed": "millbrook | 2.59",
+  "answered": true,
+  "correct": true,
+  "api_calls": 5,
+  "input_tokens": 10990,
+  "output_tokens": 646,
+  "cached_tokens": 10942,
+  "reasoning_tokens": 0,
+  "seconds": 2.601,
+  "final_text": "ANSWER: millbrook | 2.59",
+  "calls": [
+    {
+      "input_tokens": 2198,
+      "output_tokens": 117,
+      "cached_tokens": 2162,
+      "reasoning_tokens": 0,
+      "seconds": 2.597,
+      "finish_reason": "stop"
+    },
+    {
+      "input_tokens": 2198,
+      "output_tokens": 132,
+      "cached_tokens": 2195,
+      "reasoning_tokens": 0,
+      "seconds": 2.601,
+      "finish_reason": "stop"
+    },
+    {
+      "input_tokens": 2198,
+      "output_tokens": 133,
+      "cached_tokens": 2195,
+      "reasoning_tokens": 0,
+      "seconds": 2.38,
+      "finish_reason": "stop"
+    },
+    {
+      "input_tokens": 2198,
+      "output_tokens": 132,
+      "cached_tokens": 2195,
+      "reasoning_tokens": 0,
+      "seconds": 2.292,
+      "finish_reason": "stop"
+    },
+    {
+      "input_tokens": 2198,
+      "output_tokens": 132,
+      "cached_tokens": 2195,
+      "reasoning_tokens": 0,
+      "seconds": 2.406,
+      "finish_reason": "stop"
+    }
+  ],
+  "log": {
+    "samples": [
+      "Facts used:\n- Ashgrove: 8,837 pupils and 24 schools.\n- Millbrook: 5,562 pupils and 15 schools.\n\nCalculations:\n- Ashgrove pupils per school = 8,837 ÷ 24 = 368.208 pupils per school.\n- Millbrook pupils per school = 5,562 ÷ 15 = 370.800 pupils per school.\n- Difference = 370.800 − 368.208 = 2.592 pupils per school.\n\nANSWER: Millbrook | 2.592",
+      "Facts used:\n- Ashgrove: 8,837 pupils and 24 schools.\n- Millbrook: 5,562 pupils and 15 schools.\n\nCalculations:\n- Ashgrove pupils per school = 8,837 ÷ 24 = 368.208333...\n- Millbrook pupils per school = 5,562 ÷ 15 = 370.8\n- Difference = 370.8 − 368.208333... = 2.591666... ≈ 2.592\n\nMillbrook has more pupils per school by 2.592.\n\nANSWER: Millbrook | 2.592",
+      "Facts used:\n- Ashgrove: 8,837 pupils and 24 schools.\n- Millbrook: 5,562 pupils and 15 schools.\n\nCalculations:\n- Ashgrove pupils per school = 8,837 ÷ 24 = 368.208 pupils per school.\n- Millbrook pupils per school = 5,562 ÷ 15 = 370.800 pupils per school.\n- Difference = 370.800 − 368.208 = 2.592 pupils per school.\n\nMillbrook has more pupils per school by 2.592 pupils per school.\n\nANSWER: Millbrook | 2.592",
+      "Facts used:\n- Ashgrove: 8,837 pupils across 24 schools.\n- Millbrook: 5,562 pupils across 15 schools.\n\nCalculations:\n- Ashgrove pupils per school = 8,837 ÷ 24 = 368.208333...\n- Millbrook pupils per school = 5,562 ÷ 15 = 370.8\n- Difference = 370.8 − 368.208333... = 2.591666... pupils per school.\n\nMillbrook has more pupils per school by 2.592 pupils per school.\n\nANSWER: Millbrook | 2.592",
+      "Facts used:\n- Ashgrove: 8,837 pupils across 24 schools.\n- Millbrook: 5,562 pupils across 15 schools.\n\nCalculations:\n- Ashgrove pupils per school = 8,837 ÷ 24 = 368.208333...\n- Millbrook pupils per school = 5,562 ÷ 15 = 370.8\n- Difference = 370.8 − 368.208333... = 2.591666... pupils per school.\n\nMillbrook has more pupils per school by 2.592 pupils per school.\n\nANSWER: Millbrook | 2.592"
+    ],
+    "votes": {
+      "millbrook | 2.59": 5
+    },
+    "winner_count": 5
+  }
+}

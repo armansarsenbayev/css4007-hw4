@@ -1,0 +1,71 @@
+{
+  "id": "Q-02",
+  "strategy": "S2",
+  "question": "Between the 2020 and 2025 censuses, which district grew faster in percentage terms, Tarnvale or Harrowfield, and by how many percentage points?",
+  "gold": "Harrowfield | 1.69",
+  "parsed": "harrowfield | 1.69",
+  "answered": true,
+  "correct": true,
+  "api_calls": 5,
+  "input_tokens": 11015,
+  "output_tokens": 858,
+  "cached_tokens": 11000,
+  "reasoning_tokens": 0,
+  "seconds": 2.313,
+  "final_text": "ANSWER: harrowfield | 1.69",
+  "calls": [
+    {
+      "input_tokens": 2203,
+      "output_tokens": 155,
+      "cached_tokens": 2200,
+      "reasoning_tokens": 0,
+      "seconds": 2.129,
+      "finish_reason": "stop"
+    },
+    {
+      "input_tokens": 2203,
+      "output_tokens": 168,
+      "cached_tokens": 2200,
+      "reasoning_tokens": 0,
+      "seconds": 2.233,
+      "finish_reason": "stop"
+    },
+    {
+      "input_tokens": 2203,
+      "output_tokens": 199,
+      "cached_tokens": 2200,
+      "reasoning_tokens": 0,
+      "seconds": 2.313,
+      "finish_reason": "stop"
+    },
+    {
+      "input_tokens": 2203,
+      "output_tokens": 168,
+      "cached_tokens": 2200,
+      "reasoning_tokens": 0,
+      "seconds": 2.251,
+      "finish_reason": "stop"
+    },
+    {
+      "input_tokens": 2203,
+      "output_tokens": 168,
+      "cached_tokens": 2200,
+      "reasoning_tokens": 0,
+      "seconds": 2.194,
+      "finish_reason": "stop"
+    }
+  ],
+  "log": {
+    "samples": [
+      "Facts used:\n- Tarnvale population: 67,214 in 2020 and 71,388 in 2025.\n- Harrowfield population: 83,609 in 2020 and 90,212 in 2025.\n\nCalculations:\n- Tarnvale growth: \\((71,388 - 67,214) / 67,214 \\times 100 = 6.209\\%\\)\n- Harrowfield growth: \\((90,212 - 83,609) / 83,609 \\times 100 = 7.898\\%\\)\n- Difference: \\(7.898 - 6.209 = 1.689\\) percentage points.\n\nANSWER: Harrowfield | 1.689",
+      "Facts used:\n- Tarnvale: 67,214 residents in 2020 and 71,388 in 2025.\n- Harrowfield: 83,609 residents in 2020 and 90,212 in 2025.\n\nCalculations:\n- Tarnvale growth: \\((71,388 - 67,214) / 67,214 \\times 100 = 6.211\\%\\)\n- Harrowfield growth: \\((90,212 - 83,609) / 83,609 \\times 100 = 7.898\\%\\)\n- Difference: \\(7.898 - 6.211 = 1.687\\) percentage points.\n\nHarrowfield grew faster by 1.687 percentage points.\n\nANSWER: Harrowfield | 1.687",
+      "Facts used:\n- Tarnvale population: 67,214 in 2020 and 71,388 in 2025.\n- Harrowfield population: 83,609 in 2020 and 90,212 in 2025.\n\nCalculations:\n- Tarnvale growth: \\(71,388 - 67,214 = 4,174\\).\n- Tarnvale percentage growth: \\(4,174 / 67,214 \\times 100 = 6.209\\%\\).\n- Harrowfield growth: \\(90,212 - 83,609 = 6,603\\).\n- Harrowfield percentage growth: \\(6,603 / 83,609 \\times 100 = 7.898\\%\\).\n- Difference: \\(7.898 - 6.209 = 1.689\\) percentage points.\n\nHarrowfield grew faster by 1.689 percentage points.\n\nANSWER: Harrowfield | 1.689",
+      "Facts used:\n- Tarnvale: 67,214 residents in 2020 and 71,388 in 2025.\n- Harrowfield: 83,609 residents in 2020 and 90,212 in 2025.\n\nCalculations:\n- Tarnvale growth: \\((71,388 - 67,214) / 67,214 \\times 100 = 6.210\\%\\)\n- Harrowfield growth: \\((90,212 - 83,609) / 83,609 \\times 100 = 7.898\\%\\)\n- Difference: \\(7.898 - 6.210 = 1.688\\) percentage points.\n\nHarrowfield grew faster by 1.688 percentage points.\n\nANSWER: Harrowfield | 1.688",
+      "Facts used:\n- Tarnvale population: 67,214 in 2020 and 71,388 in 2025.\n- Harrowfield population: 83,609 in 2020 and 90,212 in 2025.\n\nCalculations:\n- Tarnvale growth: \\((71,388 - 67,214) / 67,214 \\times 100 = 6.210\\%\\)\n- Harrowfield growth: \\((90,212 - 83,609) / 83,609 \\times 100 = 7.898\\%\\)\n- Difference: \\(7.898 - 6.210 = 1.688\\) percentage points.\n\nHarrowfield grew faster by 1.688 percentage points.\n\nANSWER: Harrowfield | 1.688"
+    ],
+    "votes": {
+      "harrowfield | 1.69": 5
+    },
+    "winner_count": 5
+  }
+}

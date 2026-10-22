@@ -1,0 +1,265 @@
+{
+  "id": "Q-02",
+  "strategy": "S3",
+  "question": "Between the 2020 and 2025 censuses, which district grew faster in percentage terms, Tarnvale or Harrowfield, and by how many percentage points?",
+  "gold": "Harrowfield | 1.69",
+  "parsed": "Harrowfield | 1.687",
+  "answered": true,
+  "correct": true,
+  "api_calls": 3,
+  "input_tokens": 3355,
+  "output_tokens": 291,
+  "cached_tokens": 2392,
+  "reasoning_tokens": 0,
+  "seconds": 12.625,
+  "final_text": "Harrowfield grew faster: **7.897%** versus Tarnvale’s **6.210%**, a difference of **1.687 percentage points**.\n\nI used the 2020 and 2025 census populations from profiles NR-07 and NR-03, then calculated each percentage growth and their difference.\n\nANSWER: Harrowfield | 1.687",
+  "calls": [
+    {
+      "input_tokens": 750,
+      "output_tokens": 115,
+      "cached_tokens": 0,
+      "reasoning_tokens": 0,
+      "seconds": 9.22,
+      "finish_reason": "tool_calls",
+      "round": 1
+    },
+    {
+      "input_tokens": 1199,
+      "output_tokens": 99,
+      "cached_tokens": 1196,
+      "reasoning_tokens": 0,
+      "seconds": 1.829,
+      "finish_reason": "tool_calls",
+      "round": 2
+    },
+    {
+      "input_tokens": 1406,
+      "output_tokens": 77,
+      "cached_tokens": 1196,
+      "reasoning_tokens": 0,
+      "seconds": 1.572,
+      "finish_reason": "stop",
+      "round": 3
+    }
+  ],
+  "log": {
+    "rounds": 3,
+    "tool_calls": [
+      {
+        "round": 1,
+        "id": "call_sPjYXmDbAVvk1YOs6Cy6kSV7",
+        "name": "lookup",
+        "arguments": "{\"district\": \"Tarnvale\", \"field\": \"population\", \"year\": 2020}",
+        "result": {
+          "district": "Tarnvale",
+          "field": "population",
+          "year": 2020,
+          "unit": "residents",
+          "source": "NR-03",
+          "value": 67214,
+          "evidence": "The 2025 census counted 71,388 residents, up from 67,214 at the 2020 census, on an area of 2,106.9 square kilometres."
+        },
+        "seconds": 0.001373
+      },
+      {
+        "round": 1,
+        "id": "call_arcBoQU4tPbbYm3ulLpoj59L",
+        "name": "lookup",
+        "arguments": "{\"district\": \"Tarnvale\", \"field\": \"population\", \"year\": 2025}",
+        "result": {
+          "district": "Tarnvale",
+          "field": "population",
+          "year": 2025,
+          "unit": "residents",
+          "source": "NR-03",
+          "value": 71388,
+          "evidence": "The 2025 census counted 71,388 residents, up from 67,214 at the 2020 census, on an area of 2,106.9 square kilometres."
+        },
+        "seconds": 0.000197
+      },
+      {
+        "round": 1,
+        "id": "call_njdPS1zEWCQp5yDFx3sNYeBu",
+        "name": "lookup",
+        "arguments": "{\"district\": \"Harrowfield\", \"field\": \"population\", \"year\": 2020}",
+        "result": {
+          "district": "Harrowfield",
+          "field": "population",
+          "year": 2020,
+          "unit": "residents",
+          "source": "NR-07",
+          "value": 83609,
+          "evidence": "The 2025 census recorded 90,212 residents; the 2020 census had recorded 83,609."
+        },
+        "seconds": 0.000131
+      },
+      {
+        "round": 1,
+        "id": "call_Co0TuxgRpn5gfv4y22C0OD5O",
+        "name": "lookup",
+        "arguments": "{\"district\": \"Harrowfield\", \"field\": \"population\", \"year\": 2025}",
+        "result": {
+          "district": "Harrowfield",
+          "field": "population",
+          "year": 2025,
+          "unit": "residents",
+          "source": "NR-07",
+          "value": 90212,
+          "evidence": "The 2025 census recorded 90,212 residents; the 2020 census had recorded 83,609."
+        },
+        "seconds": 0.000105
+      },
+      {
+        "round": 2,
+        "id": "call_oJVOSa9krchh6kz6aqGoUyC8",
+        "name": "calculate",
+        "arguments": "{\"expression\": \"(71388-67214)/67214*100\"}",
+        "result": {
+          "expression": "(71388-67214)/67214*100",
+          "result": 6.210015770523998
+        },
+        "seconds": 0.000326
+      },
+      {
+        "round": 2,
+        "id": "call_Ft6X2R99WF34LTP5gRyTymr6",
+        "name": "calculate",
+        "arguments": "{\"expression\": \"(90212-83609)/83609*100\"}",
+        "result": {
+          "expression": "(90212-83609)/83609*100",
+          "result": 7.8974751521965345
+        },
+        "seconds": 0.000226
+      },
+      {
+        "round": 2,
+        "id": "call_BB4LXAaO35Rihpk2JpNZqASP",
+        "name": "calculate",
+        "arguments": "{\"expression\": \"(90212-83609)/83609*100-(71388-67214)/67214*100\"}",
+        "result": {
+          "expression": "(90212-83609)/83609*100-(71388-67214)/67214*100",
+          "result": 1.6874593816725367
+        },
+        "seconds": 0.000336
+      }
+    ],
+    "messages": [
+      {
+        "role": "system",
+        "content": "Answer the question about the Nine Rivers Region. You have no documents; get every fact with the lookup tool and do every calculation with the calculate tool. Then explain briefly which facts and calculations you used.\n\nThe last line of your reply must be exactly:\nANSWER: <district name, or yes/no> | <number>\nWrite the number without units and without thousands separators. Do not round it to fewer than 3 decimal places unless it is a whole number."
+      },
+      {
+        "role": "user",
+        "content": "Between the 2020 and 2025 censuses, which district grew faster in percentage terms, Tarnvale or Harrowfield, and by how many percentage points?"
+      },
+      {
+        "role": "assistant",
+        "annotations": [],
+        "tool_calls": [
+          {
+            "id": "call_sPjYXmDbAVvk1YOs6Cy6kSV7",
+            "function": {
+              "arguments": "{\"district\": \"Tarnvale\", \"field\": \"population\", \"year\": 2020}",
+              "name": "lookup"
+            },
+            "type": "function"
+          },
+          {
+            "id": "call_arcBoQU4tPbbYm3ulLpoj59L",
+            "function": {
+              "arguments": "{\"district\": \"Tarnvale\", \"field\": \"population\", \"year\": 2025}",
+              "name": "lookup"
+            },
+            "type": "function"
+          },
+          {
+            "id": "call_njdPS1zEWCQp5yDFx3sNYeBu",
+            "function": {
+              "arguments": "{\"district\": \"Harrowfield\", \"field\": \"population\", \"year\": 2020}",
+              "name": "lookup"
+            },
+            "type": "function"
+          },
+          {
+            "id": "call_Co0TuxgRpn5gfv4y22C0OD5O",
+            "function": {
+              "arguments": "{\"district\": \"Harrowfield\", \"field\": \"population\", \"year\": 2025}",
+              "name": "lookup"
+            },
+            "type": "function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_sPjYXmDbAVvk1YOs6Cy6kSV7",
+        "content": "{\"district\": \"Tarnvale\", \"field\": \"population\", \"year\": 2020, \"unit\": \"residents\", \"source\": \"NR-03\", \"value\": 67214, \"evidence\": \"The 2025 census counted 71,388 residents, up from 67,214 at the 2020 census, on an area of 2,106.9 square kilometres.\"}"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_arcBoQU4tPbbYm3ulLpoj59L",
+        "content": "{\"district\": \"Tarnvale\", \"field\": \"population\", \"year\": 2025, \"unit\": \"residents\", \"source\": \"NR-03\", \"value\": 71388, \"evidence\": \"The 2025 census counted 71,388 residents, up from 67,214 at the 2020 census, on an area of 2,106.9 square kilometres.\"}"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_njdPS1zEWCQp5yDFx3sNYeBu",
+        "content": "{\"district\": \"Harrowfield\", \"field\": \"population\", \"year\": 2020, \"unit\": \"residents\", \"source\": \"NR-07\", \"value\": 83609, \"evidence\": \"The 2025 census recorded 90,212 residents; the 2020 census had recorded 83,609.\"}"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_Co0TuxgRpn5gfv4y22C0OD5O",
+        "content": "{\"district\": \"Harrowfield\", \"field\": \"population\", \"year\": 2025, \"unit\": \"residents\", \"source\": \"NR-07\", \"value\": 90212, \"evidence\": \"The 2025 census recorded 90,212 residents; the 2020 census had recorded 83,609.\"}"
+      },
+      {
+        "role": "assistant",
+        "annotations": [],
+        "tool_calls": [
+          {
+            "id": "call_oJVOSa9krchh6kz6aqGoUyC8",
+            "function": {
+              "arguments": "{\"expression\": \"(71388-67214)/67214*100\"}",
+              "name": "calculate"
+            },
+            "type": "function"
+          },
+          {
+            "id": "call_Ft6X2R99WF34LTP5gRyTymr6",
+            "function": {
+              "arguments": "{\"expression\": \"(90212-83609)/83609*100\"}",
+              "name": "calculate"
+            },
+            "type": "function"
+          },
+          {
+            "id": "call_BB4LXAaO35Rihpk2JpNZqASP",
+            "function": {
+              "arguments": "{\"expression\": \"(90212-83609)/83609*100-(71388-67214)/67214*100\"}",
+              "name": "calculate"
+            },
+            "type": "function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_oJVOSa9krchh6kz6aqGoUyC8",
+        "content": "{\"expression\": \"(71388-67214)/67214*100\", \"result\": 6.210015770523998}"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_Ft6X2R99WF34LTP5gRyTymr6",
+        "content": "{\"expression\": \"(90212-83609)/83609*100\", \"result\": 7.8974751521965345}"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_BB4LXAaO35Rihpk2JpNZqASP",
+        "content": "{\"expression\": \"(90212-83609)/83609*100-(71388-67214)/67214*100\", \"result\": 1.6874593816725367}"
+      },
+      {
+        "content": "Harrowfield grew faster: **7.897%** versus Tarnvale’s **6.210%**, a difference of **1.687 percentage points**.\n\nI used the 2020 and 2025 census populations from profiles NR-07 and NR-03, then calculated each percentage growth and their difference.\n\nANSWER: Harrowfield | 1.687",
+        "role": "assistant",
+        "annotations": []
+      }
+    ]
+  }
+}

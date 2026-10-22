@@ -1,0 +1,29 @@
+{
+  "id": "Q-10",
+  "strategy": "S1",
+  "question": "Which district is older, Stonecairn or Coldharbour, and how many years older is it than the other?",
+  "gold": "Stonecairn | 8",
+  "parsed": "Stonecairn | 8.0",
+  "answered": true,
+  "correct": true,
+  "api_calls": 1,
+  "input_tokens": 2185,
+  "output_tokens": 23,
+  "cached_tokens": 2153,
+  "reasoning_tokens": 0,
+  "seconds": 1.291,
+  "final_text": "Stonecairn is older by 8 years.\n\nANSWER: Stonecairn | 8",
+  "calls": [
+    {
+      "input_tokens": 2185,
+      "output_tokens": 23,
+      "cached_tokens": 2153,
+      "reasoning_tokens": 0,
+      "seconds": 1.291,
+      "finish_reason": "stop"
+    }
+  ],
+  "log": {
+    "reply": "Stonecairn is older by 8 years.\n\nANSWER: Stonecairn | 8"
+  }
+}

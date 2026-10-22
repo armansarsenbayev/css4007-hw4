@@ -1,0 +1,71 @@
+{
+  "id": "Q-13",
+  "strategy": "S2",
+  "question": "Ossford, Stonecairn and Coldharbour all lost population between the 2020 and 2025 censuses. Which lost the largest percentage, and what was that percentage?",
+  "gold": "Coldharbour | 4.16",
+  "parsed": "coldharbour | 4.16",
+  "answered": true,
+  "correct": true,
+  "api_calls": 5,
+  "input_tokens": 11040,
+  "output_tokens": 1098,
+  "cached_tokens": 10982,
+  "reasoning_tokens": 0,
+  "seconds": 2.556,
+  "final_text": "ANSWER: coldharbour | 4.16",
+  "calls": [
+    {
+      "input_tokens": 2208,
+      "output_tokens": 178,
+      "cached_tokens": 2162,
+      "reasoning_tokens": 0,
+      "seconds": 2.556,
+      "finish_reason": "stop"
+    },
+    {
+      "input_tokens": 2208,
+      "output_tokens": 213,
+      "cached_tokens": 2205,
+      "reasoning_tokens": 0,
+      "seconds": 2.517,
+      "finish_reason": "stop"
+    },
+    {
+      "input_tokens": 2208,
+      "output_tokens": 246,
+      "cached_tokens": 2205,
+      "reasoning_tokens": 0,
+      "seconds": 2.504,
+      "finish_reason": "stop"
+    },
+    {
+      "input_tokens": 2208,
+      "output_tokens": 246,
+      "cached_tokens": 2205,
+      "reasoning_tokens": 0,
+      "seconds": 2.517,
+      "finish_reason": "stop"
+    },
+    {
+      "input_tokens": 2208,
+      "output_tokens": 215,
+      "cached_tokens": 2205,
+      "reasoning_tokens": 0,
+      "seconds": 2.312,
+      "finish_reason": "stop"
+    }
+  ],
+  "log": {
+    "samples": [
+      "Facts used:\n- Ossford: population fell from 31,560 to 30,982, a decrease of 578.\n- Stonecairn: population fell from 15,473 to 14,926, a decrease of 547.\n- Coldharbour: population fell from 11,902 to 11,407, a decrease of 495.\n\nPercentage decrease calculations:\n- Ossford: \\(578 \\div 31,560 \\times 100 = 1.831\\%\\)\n- Stonecairn: \\(547 \\div 15,473 \\times 100 = 3.536\\%\\)\n- Coldharbour: \\(495 \\div 11,902 \\times 100 = 4.159\\%\\)\n\nColdharbour lost the largest percentage of its population.\n\nANSWER: Coldharbour | 4.159",
+      "Facts used:\n- Ossford: population fell from 31,560 to 30,982, a loss of 578.\n- Stonecairn: population fell from 15,473 to 14,926, a loss of 547.\n- Coldharbour: population fell from 11,902 to 11,407, a loss of 495.\n\nPercentage loss is calculated as:\n\n\\[\n\\frac{\\text{2020 population} - \\text{2025 population}}{\\text{2020 population}} \\times 100\n\\]\n\nCalculations:\n- Ossford: \\(578 \\div 31,560 \\times 100 = 1.831\\%\\)\n- Stonecairn: \\(547 \\div 15,473 \\times 100 = 3.535\\%\\)\n- Coldharbour: \\(495 \\div 11,902 \\times 100 = 4.159\\%\\)\n\nColdharbour lost the largest percentage.\n\nANSWER: Coldharbour | 4.159",
+      "Facts used:\n- Ossford: 31,560 in 2020 and 30,982 in 2025.\n- Stonecairn: 15,473 in 2020 and 14,926 in 2025.\n- Coldharbour: 11,902 in 2020 and 11,407 in 2025.\n\nPercentage population loss = (2020 population − 2025 population) ÷ 2020 population × 100.\n\nCalculations:\n- Ossford: (31,560 − 30,982) ÷ 31,560 × 100 = 578 ÷ 31,560 × 100 = 1.831%\n- Stonecairn: (15,473 − 14,926) ÷ 15,473 × 100 = 547 ÷ 15,473 × 100 = 3.535%\n- Coldharbour: (11,902 − 11,407) ÷ 11,902 × 100 = 495 ÷ 11,902 × 100 = 4.159%\n\nColdharbour lost the largest percentage.\n\nANSWER: Coldharbour | 4.159",
+      "Facts used:\n- Ossford: 31,560 in 2020 and 30,982 in 2025.\n- Stonecairn: 15,473 in 2020 and 14,926 in 2025.\n- Coldharbour: 11,902 in 2020 and 11,407 in 2025.\n\nPercentage population loss = (2020 population − 2025 population) ÷ 2020 population × 100.\n\nCalculations:\n- Ossford: (31,560 − 30,982) ÷ 31,560 × 100 = 578 ÷ 31,560 × 100 = 1.832%\n- Stonecairn: (15,473 − 14,926) ÷ 15,473 × 100 = 547 ÷ 15,473 × 100 = 3.536%\n- Coldharbour: (11,902 − 11,407) ÷ 11,902 × 100 = 495 ÷ 11,902 × 100 = 4.159%\n\nColdharbour lost the largest percentage.\n\nANSWER: Coldharbour | 4.159",
+      "Facts used:\n- Ossford: population fell from 31,560 to 30,982, a loss of 578.\n- Stonecairn: population fell from 15,473 to 14,926, a loss of 547.\n- Coldharbour: population fell from 11,902 to 11,407, a loss of 495.\n\nPercentage loss is calculated as:\n\n\\[\n\\frac{\\text{2020 population} - \\text{2025 population}}{\\text{2020 population}} \\times 100\n\\]\n\nCalculations:\n- Ossford: \\(578 \\div 31,560 \\times 100 = 1.831\\%\\)\n- Stonecairn: \\(547 \\div 15,473 \\times 100 = 3.535\\%\\)\n- Coldharbour: \\(495 \\div 11,902 \\times 100 = 4.159\\%\\)\n\nColdharbour had the largest percentage population loss.\n\nANSWER: Coldharbour | 4.159"
+    ],
+    "votes": {
+      "coldharbour | 4.16": 5
+    },
+    "winner_count": 5
+  }
+}

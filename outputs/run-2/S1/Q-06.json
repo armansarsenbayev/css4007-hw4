@@ -1,0 +1,29 @@
+{
+  "id": "Q-06",
+  "strategy": "S1",
+  "question": "Is the combined 2025 population of Redfen and Kelmarsh larger than the 2025 population of Ossford, and by how many residents do they differ?",
+  "gold": "yes | 14069",
+  "parsed": "yes | 14069.0",
+  "answered": true,
+  "correct": true,
+  "api_calls": 1,
+  "input_tokens": 2194,
+  "output_tokens": 44,
+  "cached_tokens": 2191,
+  "reasoning_tokens": 0,
+  "seconds": 1.665,
+  "final_text": "Yes. Redfen and Kelmarsh combined have 45,051 residents, compared with Ossford’s 30,982—a difference of 14,069 residents.\n\nANSWER: yes | 14069",
+  "calls": [
+    {
+      "input_tokens": 2194,
+      "output_tokens": 44,
+      "cached_tokens": 2191,
+      "reasoning_tokens": 0,
+      "seconds": 1.665,
+      "finish_reason": "stop"
+    }
+  ],
+  "log": {
+    "reply": "Yes. Redfen and Kelmarsh combined have 45,051 residents, compared with Ossford’s 30,982—a difference of 14,069 residents.\n\nANSWER: yes | 14069"
+  }
+}

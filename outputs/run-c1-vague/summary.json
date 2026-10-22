@@ -1,0 +1,92 @@
+{
+  "settings": {
+    "model": "gpt-5.6-luna",
+    "temperature": 1.0,
+    "reasoning_effort": "none",
+    "k": 5,
+    "max_rounds": 8,
+    "price_in_per_1M": 0.2,
+    "price_out_per_1M": 1.2,
+    "vague_lookup": true,
+    "year_enum": [
+      2020,
+      2024,
+      2025
+    ],
+    "year_description": "Optional; leave it out to get the 2025 figure, which is what almost every question needs (2025 census population, 2025 budget, 2025 tariff). Send 2020 ONLY when the question explicitly asks about the 2020 census (e.g. growth between 2020 and 2025). Send 2024 ONLY when the question explicitly asks about the 2024 tariff.",
+    "lookup_description": "Looks things up.",
+    "questions": [
+      "Q-01",
+      "Q-03",
+      "Q-08",
+      "Q-09",
+      "Q-13"
+    ],
+    "started": "2026-10-23 03:37:31"
+  },
+  "S3": {
+    "questions": 5,
+    "correct": 5,
+    "unanswered": 0,
+    "api_calls": 16,
+    "input_tokens": 15643,
+    "output_tokens": 1393,
+    "cached_tokens": 4513,
+    "reasoning_tokens": 0,
+    "median_seconds": 10.5,
+    "total_seconds": 48.9,
+    "cost_usd": 0.0048,
+    "per_question": {
+      "Q-01": {
+        "correct": true,
+        "answered": true,
+        "parsed": "Ossbridge | 4.57",
+        "gold": "Ossbridge | 4.6",
+        "api_calls": 4,
+        "input_tokens": 3974,
+        "output_tokens": 290,
+        "seconds": 12.316
+      },
+      "Q-03": {
+        "correct": true,
+        "answered": true,
+        "parsed": "Lindenmoor | 5.340158665",
+        "gold": "Lindenmoor | 5.3",
+        "api_calls": 3,
+        "input_tokens": 2855,
+        "output_tokens": 235,
+        "seconds": 10.312
+      },
+      "Q-08": {
+        "correct": true,
+        "answered": true,
+        "parsed": "Brightwater | 72.45615",
+        "gold": "Brightwater | 72.46",
+        "api_calls": 3,
+        "input_tokens": 2675,
+        "output_tokens": 238,
+        "seconds": 10.499
+      },
+      "Q-09": {
+        "correct": true,
+        "answered": true,
+        "parsed": "Millbrook | 0.556",
+        "gold": "Millbrook | 0.6",
+        "api_calls": 3,
+        "input_tokens": 2812,
+        "output_tokens": 310,
+        "seconds": 10.644
+      },
+      "Q-13": {
+        "correct": true,
+        "answered": true,
+        "parsed": "Coldharbour | 4.159",
+        "gold": "Coldharbour | 4.16",
+        "api_calls": 3,
+        "input_tokens": 3327,
+        "output_tokens": 320,
+        "seconds": 5.08
+      }
+    }
+  }
+}

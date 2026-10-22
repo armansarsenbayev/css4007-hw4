@@ -1,0 +1,71 @@
+{
+  "id": "Q-02",
+  "strategy": "S2",
+  "question": "Between the 2020 and 2025 censuses, which district grew faster in percentage terms, Tarnvale or Harrowfield, and by how many percentage points?",
+  "gold": "Harrowfield | 1.69",
+  "parsed": "harrowfield | 1.69",
+  "answered": true,
+  "correct": true,
+  "api_calls": 5,
+  "input_tokens": 11015,
+  "output_tokens": 962,
+  "cached_tokens": 10962,
+  "reasoning_tokens": 0,
+  "seconds": 2.974,
+  "final_text": "ANSWER: harrowfield | 1.69",
+  "calls": [
+    {
+      "input_tokens": 2203,
+      "output_tokens": 198,
+      "cached_tokens": 2162,
+      "reasoning_tokens": 0,
+      "seconds": 2.875,
+      "finish_reason": "stop"
+    },
+    {
+      "input_tokens": 2203,
+      "output_tokens": 180,
+      "cached_tokens": 2200,
+      "reasoning_tokens": 0,
+      "seconds": 2.974,
+      "finish_reason": "stop"
+    },
+    {
+      "input_tokens": 2203,
+      "output_tokens": 198,
+      "cached_tokens": 2200,
+      "reasoning_tokens": 0,
+      "seconds": 2.643,
+      "finish_reason": "stop"
+    },
+    {
+      "input_tokens": 2203,
+      "output_tokens": 188,
+      "cached_tokens": 2200,
+      "reasoning_tokens": 0,
+      "seconds": 2.533,
+      "finish_reason": "stop"
+    },
+    {
+      "input_tokens": 2203,
+      "output_tokens": 198,
+      "cached_tokens": 2200,
+      "reasoning_tokens": 0,
+      "seconds": 2.517,
+      "finish_reason": "stop"
+    }
+  ],
+  "log": {
+    "samples": [
+      "Facts used:\n- Tarnvale: 2020 population = 67,214; 2025 population = 71,388.\n- Harrowfield: 2020 population = 83,609; 2025 population = 90,212.\n\nCalculations:\n- Tarnvale growth = \\((71,388 - 67,214) / 67,214 \\times 100\\)\n- Tarnvale growth = \\(4,174 / 67,214 \\times 100 = 6.209\\%\\)\n\n- Harrowfield growth = \\((90,212 - 83,609) / 83,609 \\times 100\\)\n- Harrowfield growth = \\(6,603 / 83,609 \\times 100 = 7.898\\%\\)\n\n- Difference = \\(7.898 - 6.209 = 1.689\\) percentage points.\n\nANSWER: Harrowfield | 1.689",
+      "Facts used:\n- Tarnvale: 2020 population = 67,214; 2025 population = 71,388.\n- Harrowfield: 2020 population = 83,609; 2025 population = 90,212.\n\nCalculations:\n- Tarnvale increase = 71,388 − 67,214 = 4,174.\n- Tarnvale percentage growth = 4,174 ÷ 67,214 × 100 = 6.210%.\n- Harrowfield increase = 90,212 − 83,609 = 6,603.\n- Harrowfield percentage growth = 6,603 ÷ 83,609 × 100 = 7.898%.\n- Difference = 7.898 − 6.210 = 1.688 percentage points.\n\nANSWER: Harrowfield | 1.688",
+      "Facts used:\n- Tarnvale: 2020 population = 67,214; 2025 population = 71,388.\n- Harrowfield: 2020 population = 83,609; 2025 population = 90,212.\n\nCalculations:\n- Tarnvale growth = \\((71,388 - 67,214) / 67,214 \\times 100\\)\n- Tarnvale growth = \\(4,174 / 67,214 \\times 100 = 6.209\\%\\)\n\n- Harrowfield growth = \\((90,212 - 83,609) / 83,609 \\times 100\\)\n- Harrowfield growth = \\(6,603 / 83,609 \\times 100 = 7.898\\%\\)\n\n- Difference = \\(7.898 - 6.209 = 1.689\\) percentage points.\n\nANSWER: Harrowfield | 1.689",
+      "Facts used:\n- Tarnvale population: 67,214 in 2020 and 71,388 in 2025.\n- Harrowfield population: 83,609 in 2020 and 90,212 in 2025.\n\nCalculations:\n- Tarnvale growth: \\(71,388 - 67,214 = 4,174\\).\n- Tarnvale percentage growth: \\(4,174 \\div 67,214 \\times 100 = 6.210\\%\\).\n- Harrowfield growth: \\(90,212 - 83,609 = 6,603\\).\n- Harrowfield percentage growth: \\(6,603 \\div 83,609 \\times 100 = 7.898\\%\\).\n- Difference: \\(7.898 - 6.210 = 1.688\\) percentage points.\n\nANSWER: Harrowfield | 1.688",
+      "Facts used:\n- Tarnvale: 2020 population = 67,214; 2025 population = 71,388.\n- Harrowfield: 2020 population = 83,609; 2025 population = 90,212.\n\nCalculations:\n- Tarnvale growth = \\((71,388 - 67,214) / 67,214 \\times 100\\)\n- Tarnvale growth = \\(4,174 / 67,214 \\times 100 = 6.209\\%\\)\n\n- Harrowfield growth = \\((90,212 - 83,609) / 83,609 \\times 100\\)\n- Harrowfield growth = \\(6,603 / 83,609 \\times 100 = 7.898\\%\\)\n\n- Difference = \\(7.898 - 6.209 = 1.689\\) percentage points\n\nANSWER: Harrowfield | 1.689"
+    ],
+    "votes": {
+      "harrowfield | 1.69": 5
+    },
+    "winner_count": 5
+  }
+}

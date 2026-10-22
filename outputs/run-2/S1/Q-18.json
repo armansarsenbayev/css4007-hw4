@@ -1,0 +1,29 @@
+{
+  "id": "Q-18",
+  "strategy": "S1",
+  "question": "If Millbrook's population grows by the same percentage from 2025 to 2030 as it did from 2020 to 2025, will it exceed 40,000 residents in 2030? Give the projected 2030 population.",
+  "gold": "yes | 40013",
+  "parsed": "yes | 40014.812",
+  "answered": true,
+  "correct": false,
+  "api_calls": 1,
+  "input_tokens": 2211,
+  "output_tokens": 61,
+  "cached_tokens": 2208,
+  "reasoning_tokens": 0,
+  "seconds": 1.672,
+  "final_text": "Yes. Millbrook’s population grew by 7.552% from 2020 to 2025. Applying the same percentage growth to its 2025 population gives a projected 2030 population of 40,014.812 residents.\n\nANSWER: yes | 40014.812",
+  "calls": [
+    {
+      "input_tokens": 2211,
+      "output_tokens": 61,
+      "cached_tokens": 2208,
+      "reasoning_tokens": 0,
+      "seconds": 1.672,
+      "finish_reason": "stop"
+    }
+  ],
+  "log": {
+    "reply": "Yes. Millbrook’s population grew by 7.552% from 2020 to 2025. Applying the same percentage growth to its 2025 population gives a projected 2030 population of 40,014.812 residents.\n\nANSWER: yes | 40014.812"
+  }
+}

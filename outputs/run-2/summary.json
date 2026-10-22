@@ -1,0 +1,681 @@
+{
+  "settings": {
+    "model": "gpt-5.6-luna",
+    "temperature": 1.0,
+    "reasoning_effort": "none",
+    "k": 5,
+    "max_rounds": 8,
+    "price_in_per_1M": 0.2,
+    "price_out_per_1M": 1.2,
+    "vague_lookup": false,
+    "lookup_description": "Get ONE official figure about ONE district of the Nine Rivers Region (or the regional water tariff). Uses only the current 2025 district profiles: archived 2019 profiles are never used and published correction notices are already applied. Returns the number at full precision, its unit, the id of the source document and the sentence it was read from. Water use is always returned in megalitres (converted if a profile uses cubic metres). Districts: Ossbridge, Ossford, Tarnvale, Kelmarsh, Brightwater, Stonecairn, Harrowfield, Lindenmoor, Redfen, Ashgrove, Millbrook, Coldharbour. Call once per (district, field); call it several times in parallel when you need several figures. Do not guess figures yourself.",
+    "questions": [
+      "Q-01",
+      "Q-02",
+      "Q-03",
+      "Q-04",
+      "Q-05",
+      "Q-06",
+      "Q-07",
+      "Q-08",
+      "Q-09",
+      "Q-10",
+      "Q-11",
+      "Q-12",
+      "Q-13",
+      "Q-14",
+      "Q-15",
+      "Q-16",
+      "Q-17",
+      "Q-18",
+      "Q-19",
+      "Q-20"
+    ],
+    "started": "2026-10-23 03:31:03"
+  },
+  "S1": {
+    "questions": 20,
+    "correct": 7,
+    "unanswered": 0,
+    "api_calls": 20,
+    "input_tokens": 43880,
+    "output_tokens": 804,
+    "cached_tokens": 43820,
+    "reasoning_tokens": 0,
+    "median_seconds": 1.58,
+    "total_seconds": 46.1,
+    "cost_usd": 0.0097,
+    "per_question": {
+      "Q-01": {
+        "correct": true,
+        "answered": true,
+        "parsed": "Ossbridge | 4.57",
+        "gold": "Ossbridge | 4.6",
+        "api_calls": 1,
+        "input_tokens": 2188,
+        "output_tokens": 54,
+        "seconds": 5.351
+      },
+      "Q-02": {
+        "correct": false,
+        "answered": true,
+        "parsed": "Harrowfield | 0.02",
+        "gold": "Harrowfield | 1.69",
+        "api_calls": 1,
+        "input_tokens": 2194,
+        "output_tokens": 26,
+        "seconds": 5.234
+      },
+      "Q-03": {
+        "correct": false,
+        "answered": true,
+        "parsed": "Lindenmoor | 0.129",
+        "gold": "Lindenmoor | 5.3",
+        "api_calls": 1,
+        "input_tokens": 2194,
+        "output_tokens": 32,
+        "seconds": 5.33
+      },
+      "Q-04": {
+        "correct": true,
+        "answered": true,
+        "parsed": "Millbrook | 2.592",
+        "gold": "Millbrook | 2.59",
+        "api_calls": 1,
+        "input_tokens": 2189,
+        "output_tokens": 48,
+        "seconds": 5.514
+      },
+      "Q-05": {
+        "correct": false,
+        "answered": true,
+        "parsed": "Stonecairn | 31194.823",
+        "gold": "Coldharbour | 14235",
+        "api_calls": 1,
+        "input_tokens": 2190,
+        "output_tokens": 41,
+        "seconds": 1.557
+      },
+      "Q-06": {
+        "correct": true,
+        "answered": true,
+        "parsed": "yes | 14069.0",
+        "gold": "yes | 14069",
+        "api_calls": 1,
+        "input_tokens": 2194,
+        "output_tokens": 44,
+        "seconds": 1.665
+      },
+      "Q-07": {
+        "correct": false,
+        "answered": true,
+        "parsed": "Coldharbour | 18.763",
+        "gold": "Coldharbour | 18.5",
+        "api_calls": 1,
+        "input_tokens": 2198,
+        "output_tokens": 42,
+        "seconds": 2.34
+      },
+      "Q-08": {
+        "correct": false,
+        "answered": true,
+        "parsed": "Brightwater | 72.382",
+        "gold": "Brightwater | 72.46",
+        "api_calls": 1,
+        "input_tokens": 2196,
+        "output_tokens": 28,
+        "seconds": 1.493
+      },
+      "Q-09": {
+        "correct": true,
+        "answered": true,
+        "parsed": "Millbrook | 0.558",
+        "gold": "Millbrook | 0.6",
+        "api_calls": 1,
+        "input_tokens": 2188,
+        "output_tokens": 62,
+        "seconds": 1.694
+      },
+      "Q-10": {
+        "correct": true,
+        "answered": true,
+        "parsed": "Stonecairn | 8.0",
+        "gold": "Stonecairn | 8",
+        "api_calls": 1,
+        "input_tokens": 2185,
+        "output_tokens": 23,
+        "seconds": 1.1
+      },
+      "Q-11": {
+        "correct": false,
+        "answered": true,
+        "parsed": "Redfen | 19.5",
+        "gold": "Redfen | 56.1",
+        "api_calls": 1,
+        "input_tokens": 2203,
+        "output_tokens": 38,
+        "seconds": 1.485
+      },
+      "Q-12": {
+        "correct": false,
+        "answered": true,
+        "parsed": "Harrowfield | 1192.918",
+        "gold": "Tarnvale | 64.4",
+        "api_calls": 1,
+        "input_tokens": 2191,
+        "output_tokens": 31,
+        "seconds": 1.394
+      },
+      "Q-13": {
+        "correct": false,
+        "answered": true,
+        "parsed": "Stonecairn | 3.537",
+        "gold": "Coldharbour | 4.16",
+        "api_calls": 1,
+        "input_tokens": 2199,
+        "output_tokens": 29,
+        "seconds": 1.611
+      },
+      "Q-14": {
+        "correct": false,
+        "answered": true,
+        "parsed": "Ashgrove | 0.019",
+        "gold": "Ashgrove | 4.9",
+        "api_calls": 1,
+        "input_tokens": 2194,
+        "output_tokens": 30,
+        "seconds": 1.503
+      },
+      "Q-15": {
+        "correct": true,
+        "answered": true,
+        "parsed": "Redfen | 17.609",
+        "gold": "Redfen | 17.61",
+        "api_calls": 1,
+        "input_tokens": 2189,
+        "output_tokens": 64,
+        "seconds": 1.601
+      },
+      "Q-16": {
+        "correct": true,
+        "answered": true,
+        "parsed": "yes | 23.9",
+        "gold": "yes | 23.9",
+        "api_calls": 1,
+        "input_tokens": 2188,
+        "output_tokens": 44,
+        "seconds": 1.448
+      },
+      "Q-17": {
+        "correct": false,
+        "answered": true,
+        "parsed": "Harrowfield | 11.306",
+        "gold": "Harrowfield | 884",
+        "api_calls": 1,
+        "input_tokens": 2200,
+        "output_tokens": 34,
+        "seconds": 1.357
+      },
+      "Q-18": {
+        "correct": false,
+        "answered": true,
+        "parsed": "yes | 40014.812",
+        "gold": "yes | 40013",
+        "api_calls": 1,
+        "input_tokens": 2211,
+        "output_tokens": 61,
+        "seconds": 1.672
+      },
+      "Q-19": {
+        "correct": false,
+        "answered": true,
+        "parsed": "Redfen | 0.135",
+        "gold": "Lindenmoor | 0.035",
+        "api_calls": 1,
+        "input_tokens": 2188,
+        "output_tokens": 28,
+        "seconds": 1.273
+      },
+      "Q-20": {
+        "correct": false,
+        "answered": true,
+        "parsed": "Harrowfield | 0.872",
+        "gold": "Ashgrove | 2993",
+        "api_calls": 1,
+        "input_tokens": 2201,
+        "output_tokens": 45,
+        "seconds": 1.433
+      }
+    }
+  },
+  "S2": {
+    "questions": 20,
+    "correct": 15,
+    "unanswered": 0,
+    "api_calls": 100,
+    "input_tokens": 220300,
+    "output_tokens": 17780,
+    "cached_tokens": 220000,
+    "reasoning_tokens": 0,
+    "median_seconds": 2.42,
+    "total_seconds": 51.3,
+    "cost_usd": 0.0654,
+    "per_question": {
+      "Q-01": {
+        "correct": true,
+        "answered": true,
+        "parsed": "ossbridge | 4.6",
+        "gold": "Ossbridge | 4.6",
+        "api_calls": 5,
+        "input_tokens": 10985,
+        "output_tokens": 715,
+        "seconds": 2.198
+      },
+      "Q-02": {
+        "correct": true,
+        "answered": true,
+        "parsed": "harrowfield | 1.69",
+        "gold": "Harrowfield | 1.69",
+        "api_calls": 5,
+        "input_tokens": 11015,
+        "output_tokens": 858,
+        "seconds": 2.313
+      },
+      "Q-03": {
+        "correct": true,
+        "answered": true,
+        "parsed": "lindenmoor | 5.3",
+        "gold": "Lindenmoor | 5.3",
+        "api_calls": 5,
+        "input_tokens": 11015,
+        "output_tokens": 1236,
+        "seconds": 2.948
+      },
+      "Q-04": {
+        "correct": true,
+        "answered": true,
+        "parsed": "millbrook | 2.59",
+        "gold": "Millbrook | 2.59",
+        "api_calls": 5,
+        "input_tokens": 10990,
+        "output_tokens": 618,
+        "seconds": 2.217
+      },
+      "Q-05": {
+        "correct": false,
+        "answered": true,
+        "parsed": "coldharbour | 14238.0",
+        "gold": "Coldharbour | 14235",
+        "api_calls": 5,
+        "input_tokens": 10995,
+        "output_tokens": 1258,
+        "seconds": 3.378
+      },
+      "Q-06": {
+        "correct": true,
+        "answered": true,
+        "parsed": "yes | 14069.0",
+        "gold": "yes | 14069",
+        "api_calls": 5,
+        "input_tokens": 11015,
+        "output_tokens": 549,
+        "seconds": 2.463
+      },
+      "Q-07": {
+        "correct": true,
+        "answered": true,
+        "parsed": "coldharbour | 18.49",
+        "gold": "Coldharbour | 18.5",
+        "api_calls": 5,
+        "input_tokens": 11035,
+        "output_tokens": 821,
+        "seconds": 3.227
+      },
+      "Q-08": {
+        "correct": true,
+        "answered": true,
+        "parsed": "brightwater | 72.46",
+        "gold": "Brightwater | 72.46",
+        "api_calls": 5,
+        "input_tokens": 11025,
+        "output_tokens": 1240,
+        "seconds": 2.946
+      },
+      "Q-09": {
+        "correct": true,
+        "answered": true,
+        "parsed": "millbrook | 0.6",
+        "gold": "Millbrook | 0.6",
+        "api_calls": 5,
+        "input_tokens": 10985,
+        "output_tokens": 795,
+        "seconds": 2.662
+      },
+      "Q-10": {
+        "correct": true,
+        "answered": true,
+        "parsed": "stonecairn | 8.0",
+        "gold": "Stonecairn | 8",
+        "api_calls": 5,
+        "input_tokens": 10970,
+        "output_tokens": 332,
+        "seconds": 1.792
+      },
+      "Q-11": {
+        "correct": true,
+        "answered": true,
+        "parsed": "redfen | 56.1",
+        "gold": "Redfen | 56.1",
+        "api_calls": 5,
+        "input_tokens": 11060,
+        "output_tokens": 848,
+        "seconds": 2.385
+      },
+      "Q-12": {
+        "correct": false,
+        "answered": true,
+        "parsed": "tarnvale | 64.1",
+        "gold": "Tarnvale | 64.4",
+        "api_calls": 5,
+        "input_tokens": 11000,
+        "output_tokens": 1111,
+        "seconds": 2.742
+      },
+      "Q-13": {
+        "correct": true,
+        "answered": true,
+        "parsed": "coldharbour | 4.16",
+        "gold": "Coldharbour | 4.16",
+        "api_calls": 5,
+        "input_tokens": 11040,
+        "output_tokens": 894,
+        "seconds": 2.258
+      },
+      "Q-14": {
+        "correct": false,
+        "answered": true,
+        "parsed": "ashgrove | 0.0",
+        "gold": "Ashgrove | 4.9",
+        "api_calls": 5,
+        "input_tokens": 11015,
+        "output_tokens": 1095,
+        "seconds": 2.995
+      },
+      "Q-15": {
+        "correct": true,
+        "answered": true,
+        "parsed": "redfen | 17.61",
+        "gold": "Redfen | 17.61",
+        "api_calls": 5,
+        "input_tokens": 10990,
+        "output_tokens": 577,
+        "seconds": 2.119
+      },
+      "Q-16": {
+        "correct": true,
+        "answered": true,
+        "parsed": "yes | 23.9",
+        "gold": "yes | 23.9",
+        "api_calls": 5,
+        "input_tokens": 10985,
+        "output_tokens": 629,
+        "seconds": 2.018
+      },
+      "Q-17": {
+        "correct": false,
+        "answered": true,
+        "parsed": "harrowfield | 882.0",
+        "gold": "Harrowfield | 884",
+        "api_calls": 5,
+        "input_tokens": 11045,
+        "output_tokens": 1517,
+        "seconds": 3.582
+      },
+      "Q-18": {
+        "correct": true,
+        "answered": true,
+        "parsed": "yes | 40013.0",
+        "gold": "yes | 40013",
+        "api_calls": 5,
+        "input_tokens": 11100,
+        "output_tokens": 675,
+        "seconds": 2.154
+      },
+      "Q-19": {
+        "correct": true,
+        "answered": true,
+        "parsed": "lindenmoor | 0.035",
+        "gold": "Lindenmoor | 0.035",
+        "api_calls": 5,
+        "input_tokens": 10985,
+        "output_tokens": 801,
+        "seconds": 2.128
+      },
+      "Q-20": {
+        "correct": false,
+        "answered": true,
+        "parsed": "ashgrove | 2998.0",
+        "gold": "Ashgrove | 2993",
+        "api_calls": 5,
+        "input_tokens": 11050,
+        "output_tokens": 1211,
+        "seconds": 2.793
+      }
+    }
+  },
+  "S3": {
+    "questions": 20,
+    "correct": 14,
+    "unanswered": 0,
+    "api_calls": 67,
+    "input_tokens": 72989,
+    "output_tokens": 6096,
+    "cached_tokens": 48208,
+    "reasoning_tokens": 0,
+    "median_seconds": 5.3,
+    "total_seconds": 111.0,
+    "cost_usd": 0.0219,
+    "per_question": {
+      "Q-01": {
+        "correct": true,
+        "answered": true,
+        "parsed": "Ossbridge | 4.57015387231975",
+        "gold": "Ossbridge | 4.6",
+        "api_calls": 5,
+        "input_tokens": 6181,
+        "output_tokens": 389,
+        "seconds": 7.742
+      },
+      "Q-02": {
+        "correct": true,
+        "answered": true,
+        "parsed": "Harrowfield | 1.6874593816725367",
+        "gold": "Harrowfield | 1.69",
+        "api_calls": 3,
+        "input_tokens": 3197,
+        "output_tokens": 290,
+        "seconds": 5.828
+      },
+      "Q-03": {
+        "correct": false,
+        "answered": true,
+        "parsed": "Lindenmoor | 3.9599211285",
+        "gold": "Lindenmoor | 5.3",
+        "api_calls": 4,
+        "input_tokens": 4796,
+        "output_tokens": 390,
+        "seconds": 6.732
+      },
+      "Q-04": {
+        "correct": true,
+        "answered": true,
+        "parsed": "Millbrook | 2.592",
+        "gold": "Millbrook | 2.59",
+        "api_calls": 3,
+        "input_tokens": 3085,
+        "output_tokens": 307,
+        "seconds": 5.266
+      },
+      "Q-05": {
+        "correct": false,
+        "answered": true,
+        "parsed": "Coldharbour | 12437.766",
+        "gold": "Coldharbour | 14235",
+        "api_calls": 4,
+        "input_tokens": 4575,
+        "output_tokens": 335,
+        "seconds": 6.531
+      },
+      "Q-06": {
+        "correct": true,
+        "answered": true,
+        "parsed": "yes | 14069.0",
+        "gold": "yes | 14069",
+        "api_calls": 3,
+        "input_tokens": 2805,
+        "output_tokens": 197,
+        "seconds": 4.594
+      },
+      "Q-07": {
+        "correct": false,
+        "answered": true,
+        "parsed": "Coldharbour | 17.515",
+        "gold": "Coldharbour | 18.5",
+        "api_calls": 3,
+        "input_tokens": 3256,
+        "output_tokens": 326,
+        "seconds": 4.905
+      },
+      "Q-08": {
+        "correct": false,
+        "answered": true,
+        "parsed": "Brightwater | 67.0862",
+        "gold": "Brightwater | 72.46",
+        "api_calls": 3,
+        "input_tokens": 2956,
+        "output_tokens": 250,
+        "seconds": 4.514
+      },
+      "Q-09": {
+        "correct": true,
+        "answered": true,
+        "parsed": "Millbrook | 0.556",
+        "gold": "Millbrook | 0.6",
+        "api_calls": 4,
+        "input_tokens": 4370,
+        "output_tokens": 310,
+        "seconds": 6.505
+      },
+      "Q-10": {
+        "correct": true,
+        "answered": true,
+        "parsed": "Stonecairn | 8.0",
+        "gold": "Stonecairn | 8",
+        "api_calls": 3,
+        "input_tokens": 2527,
+        "output_tokens": 151,
+        "seconds": 4.487
+      },
+      "Q-11": {
+        "correct": true,
+        "answered": true,
+        "parsed": "Redfen | 56.10000000000002",
+        "gold": "Redfen | 56.1",
+        "api_calls": 3,
+        "input_tokens": 3599,
+        "output_tokens": 397,
+        "seconds": 5.691
+      },
+      "Q-12": {
+        "correct": true,
+        "answered": true,
+        "parsed": "Tarnvale | 64.392",
+        "gold": "Tarnvale | 64.4",
+        "api_calls": 3,
+        "input_tokens": 3096,
+        "output_tokens": 261,
+        "seconds": 4.404
+      },
+      "Q-13": {
+        "correct": true,
+        "answered": true,
+        "parsed": "Coldharbour | 4.1589648798521255",
+        "gold": "Coldharbour | 4.16",
+        "api_calls": 3,
+        "input_tokens": 3630,
+        "output_tokens": 343,
+        "seconds": 4.902
+      },
+      "Q-14": {
+        "correct": false,
+        "answered": true,
+        "parsed": "Ashgrove | 2.374",
+        "gold": "Ashgrove | 4.9",
+        "api_calls": 4,
+        "input_tokens": 4504,
+        "output_tokens": 315,
+        "seconds": 5.938
+      },
+      "Q-15": {
+        "correct": true,
+        "answered": true,
+        "parsed": "Redfen | 17.609090909",
+        "gold": "Redfen | 17.61",
+        "api_calls": 3,
+        "input_tokens": 3081,
+        "output_tokens": 281,
+        "seconds": 4.808
+      },
+      "Q-16": {
+        "correct": true,
+        "answered": true,
+        "parsed": "yes | 23.9",
+        "gold": "yes | 23.9",
+        "api_calls": 3,
+        "input_tokens": 2868,
+        "output_tokens": 245,
+        "seconds": 4.67
+      },
+      "Q-17": {
+        "correct": false,
+        "answered": true,
+        "parsed": "Harrowfield | 818.9072987534146",
+        "gold": "Harrowfield | 884",
+        "api_calls": 3,
+        "input_tokens": 3434,
+        "output_tokens": 378,
+        "seconds": 5.781
+      },
+      "Q-18": {
+        "correct": true,
+        "answered": true,
+        "parsed": "yes | 40013.391",
+        "gold": "yes | 40013",
+        "api_calls": 3,
+        "input_tokens": 2646,
+        "output_tokens": 175,
+        "seconds": 4.847
+      },
+      "Q-19": {
+        "correct": true,
+        "answered": true,
+        "parsed": "Lindenmoor | 0.034835028",
+        "gold": "Lindenmoor | 0.035",
+        "api_calls": 3,
+        "input_tokens": 3227,
+        "output_tokens": 340,
+        "seconds": 5.325
+      },
+      "Q-20": {
+        "correct": true,
+        "answered": true,
+        "parsed": "Ashgrove | 2993.343",
+        "gold": "Ashgrove | 2993",
+        "api_calls": 4,
+        "input_tokens": 5156,
+        "output_tokens": 416,
+        "seconds": 7.577
+      }
+    }
+  }
+}

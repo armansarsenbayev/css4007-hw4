@@ -15,7 +15,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 
 from score import parse_answer
-from tools import run_tool, tool_schemas, LOOKUP_DESCRIPTION
+from tools import run_tool, tool_schemas, LOOKUP_DESCRIPTION, YEAR_ENUM_V1, YEAR_DESCRIPTION_V1
 
 # Key comes from .env (or from the file named in ENV_FILE). It is never printed or logged.
 load_dotenv(os.getenv("ENV_FILE", ".env"))
@@ -144,8 +144,9 @@ def s2_vote(q: dict, k: int = K, **_) -> dict:
 # ------------------------------- S3 -------------------------------------
 
 def s3_tools(q: dict, lookup_description: str = LOOKUP_DESCRIPTION, max_rounds: int = MAX_ROUNDS,
+             year_enum: list[int] = YEAR_ENUM_V1, year_description: str = YEAR_DESCRIPTION_V1,
              **_) -> dict:
-    tools = tool_schemas(lookup_description)
+    tools = tool_schemas(lookup_description, year_enum, year_description)
     messages = [
         {"role": "system", "content": f"{S3_INSTRUCTION}\n\n{ANSWER_FORMAT}"},
         {"role": "user", "content": q["question"]},

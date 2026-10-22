@@ -1,0 +1,6 @@
+S3: 4/5 correct, 0 unanswered, in=16707 out=1286 median=11.63s total=53.0s cost=$0.0049
+   Q-01 BAD got=Ossford | 4.57 gold=Ossbridge | 4.6 calls=3
+   Q-03 OK  got=Lindenmoor | 5.34 gold=Lindenmoor | 5.3 calls=3
+   Q-08 OK  got=Brightwater | 72.45615 gold=Brightwater | 72.46 calls=3
+   Q-09 OK  got=Millbrook | 0.556 gold=Millbrook | 0.6 calls=3
+   Q-13 OK  got=Coldharbour | 4.1589648798521255 gold=Coldharbour | 4.16 calls=3

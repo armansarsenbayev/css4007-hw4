@@ -315,7 +315,21 @@ LOOKUP_DESCRIPTION = (
 VAGUE_LOOKUP_DESCRIPTION = "Looks things up."
 
 
-def lookup_schema(description: str = LOOKUP_DESCRIPTION) -> dict:
+# v1 = as written in Part A. The model read v1 as "population -> 2020, tariff -> 2024"
+# (see SUBMISSION.md, Part B), so v2 rewrites only the year description.
+YEAR_ENUM_V1 = [2020, 2024, 2025]
+YEAR_ENUM_V2 = [2025, 2024, 2020]   # tried first: order alone did not change anything
+YEAR_DESCRIPTION_V1 = ("Optional, default 2025. Use 2020 only for population (2020 census) and "
+                       "2024 only for the water tariff.")
+YEAR_DESCRIPTION_V2 = ("Optional; leave it out to get the 2025 figure, which is what almost every "
+                       "question needs (2025 census population, 2025 budget, 2025 tariff). Send "
+                       "2020 ONLY when the question explicitly asks about the 2020 census (e.g. "
+                       "growth between 2020 and 2025). Send 2024 ONLY when the question explicitly "
+                       "asks about the 2024 tariff.")
+
+
+def lookup_schema(description: str = LOOKUP_DESCRIPTION, year_enum: list[int] = YEAR_ENUM_V1,
+                  year_description: str = YEAR_DESCRIPTION_V1) -> dict:
     return {
         "type": "function",
         "function": {
@@ -338,9 +352,8 @@ def lookup_schema(description: str = LOOKUP_DESCRIPTION) -> dict:
                     },
                     "year": {
                         "type": "integer",
-                        "enum": [2020, 2024, 2025],
-                        "description": "Optional, default 2025. Use 2020 only for population "
-                                       "(2020 census) and 2024 only for the water tariff.",
+                        "enum": list(year_enum),
+                        "description": year_description,
                     },
                 },
                 "required": ["field"],
@@ -377,8 +390,9 @@ CALCULATE_SCHEMA = {
 }
 
 
-def tool_schemas(lookup_description: str = LOOKUP_DESCRIPTION) -> list[dict]:
-    return [lookup_schema(lookup_description), CALCULATE_SCHEMA]
+def tool_schemas(lookup_description: str = LOOKUP_DESCRIPTION, year_enum: list[int] = YEAR_ENUM_V1,
+                 year_description: str = YEAR_DESCRIPTION_V1) -> list[dict]:
+    return [lookup_schema(lookup_description, year_enum, year_description), CALCULATE_SCHEMA]
 
 
 TOOLS = {"lookup": lookup, "calculate": calculate}
