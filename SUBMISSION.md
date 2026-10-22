@@ -234,7 +234,15 @@ What I give up: generality. A fixed field enum cannot answer a question about a 
 
 <!-- model, temperature, k, prompts, answer format, anything else -->
 
-**My rule for a correct answer** (written before the first full run):
+**My rule for a correct answer** (written before the first full run, implemented in [`score.py`](score.py)):
+
+- The reply must contain a line `ANSWER: <name> | <number>`; if there are several, the **last** one counts. No such line (or the S3 loop hit its round limit) → **unanswered**, and unanswered counts as wrong.
+- **Name:** must equal the gold `answer` exactly, ignoring only letter case and surrounding spaces / `*` / quotes (`millbrook` = `Millbrook`; `Millbrook district` ≠ `Millbrook`).
+- **Number:** units and thousands separators are stripped, the number is rounded to the gold `decimals`, and it must be within one unit of the last digit of the gold `value`: `|round(x, decimals) − value| ≤ 10^−decimals`. So for Q-09 (`0.6`, 1 decimal) any of 0.5–0.7 after rounding is accepted, for Q-05 (`14235`, 0 decimals) 14234–14236.
+- **Both** must hold. A right name with a wrong number is wrong (the "by how much" part is half the question).
+- The model is told to give at least 3 decimals and never sees `decimals`, so rounding is done by the scorer, the same way for all three strategies. In S2 the vote is taken over `(name, number rounded to decimals)` pairs, using the same rounding.
+
+Why this rule: the tolerance of one last-digit unit absorbs legitimate rounding-order differences (e.g. rounding densities before subtracting), but it does **not** absorb any trap: the uncorrected Brightwater area gives 0.1 instead of 0.6 on Q-09, unconverted Lindenmoor water is off by ×1000, archived Tarnvale figures change Q-02 by far more than 0.01. An exact-match rule would punish correct reasoning for formatting; a percentage tolerance (say ±5 %) would accept Q-09 = 0.57… but also accept wrong answers on large values like Q-18 (40013 ± 2000 would include "no, it stays below 40,000").
 
 | Run | Strategy | Correct /20 | Unanswered | Input tokens | Output tokens | Median seconds per question | Total seconds | Cost ($) |
 |---|---|---:|---:|---:|---:|---:|---:|---:|

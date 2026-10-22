@@ -1,0 +1,154 @@
+{
+  "settings": {
+    "model": "gpt-5.6-luna",
+    "temperature": 1.0,
+    "reasoning_effort": "none",
+    "k": 5,
+    "max_rounds": 8,
+    "price_in_per_1M": 0.2,
+    "price_out_per_1M": 1.2,
+    "vague_lookup": false,
+    "lookup_description": "Get ONE official figure about ONE district of the Nine Rivers Region (or the regional water tariff). Uses only the current 2025 district profiles: archived 2019 profiles are never used and published correction notices are already applied. Returns the number at full precision, its unit, the id of the source document and the sentence it was read from. Water use is always returned in megalitres (converted if a profile uses cubic metres). Districts: Ossbridge, Ossford, Tarnvale, Kelmarsh, Brightwater, Stonecairn, Harrowfield, Lindenmoor, Redfen, Ashgrove, Millbrook, Coldharbour. Call once per (district, field); call it several times in parallel when you need several figures. Do not guess figures yourself.",
+    "questions": [
+      "Q-03",
+      "Q-09",
+      "Q-11"
+    ],
+    "started": "2026-10-23 03:29:00"
+  },
+  "S1": {
+    "questions": 3,
+    "correct": 0,
+    "unanswered": 0,
+    "api_calls": 3,
+    "input_tokens": 6585,
+    "output_tokens": 139,
+    "cached_tokens": 4306,
+    "reasoning_tokens": 0,
+    "median_seconds": 5.06,
+    "total_seconds": 15.7,
+    "cost_usd": 0.0015,
+    "per_question": {
+      "Q-03": {
+        "correct": false,
+        "answered": true,
+        "parsed": "Kelmarsh | 0.021",
+        "gold": "Lindenmoor | 5.3",
+        "api_calls": 1,
+        "input_tokens": 2194,
+        "output_tokens": 68,
+        "seconds": 5.608
+      },
+      "Q-09": {
+        "correct": false,
+        "answered": true,
+        "parsed": "Brightwater | 1.485",
+        "gold": "Millbrook | 0.6",
+        "api_calls": 1,
+        "input_tokens": 2188,
+        "output_tokens": 33,
+        "seconds": 5.045
+      },
+      "Q-11": {
+        "correct": false,
+        "answered": true,
+        "parsed": "Millbrook | 90.3",
+        "gold": "Redfen | 56.1",
+        "api_calls": 1,
+        "input_tokens": 2203,
+        "output_tokens": 38,
+        "seconds": 5.059
+      }
+    }
+  },
+  "S2": {
+    "questions": 3,
+    "correct": 3,
+    "unanswered": 0,
+    "api_calls": 15,
+    "input_tokens": 33060,
+    "output_tokens": 2844,
+    "cached_tokens": 30689,
+    "reasoning_tokens": 0,
+    "median_seconds": 2.36,
+    "total_seconds": 7.2,
+    "cost_usd": 0.01,
+    "per_question": {
+      "Q-03": {
+        "correct": true,
+        "answered": true,
+        "parsed": "lindenmoor | 5.3",
+        "gold": "Lindenmoor | 5.3",
+        "api_calls": 5,
+        "input_tokens": 11015,
+        "output_tokens": 1256,
+        "seconds": 2.712
+      },
+      "Q-09": {
+        "correct": true,
+        "answered": true,
+        "parsed": "millbrook | 0.6",
+        "gold": "Millbrook | 0.6",
+        "api_calls": 5,
+        "input_tokens": 10985,
+        "output_tokens": 768,
+        "seconds": 2.152
+      },
+      "Q-11": {
+        "correct": true,
+        "answered": true,
+        "parsed": "redfen | 56.1",
+        "gold": "Redfen | 56.1",
+        "api_calls": 5,
+        "input_tokens": 11060,
+        "output_tokens": 820,
+        "seconds": 2.363
+      }
+    }
+  },
+  "S3": {
+    "questions": 3,
+    "correct": 2,
+    "unanswered": 0,
+    "api_calls": 11,
+    "input_tokens": 12545,
+    "output_tokens": 998,
+    "cached_tokens": 6195,
+    "reasoning_tokens": 0,
+    "median_seconds": 6.22,
+    "total_seconds": 18.1,
+    "cost_usd": 0.0037,
+    "per_question": {
+      "Q-03": {
+        "correct": true,
+        "answered": true,
+        "parsed": "Lindenmoor | 5.34",
+        "gold": "Lindenmoor | 5.3",
+        "api_calls": 4,
+        "input_tokens": 4623,
+        "output_tokens": 342,
+        "seconds": 6.66
+      },
+      "Q-09": {
+        "correct": true,
+        "answered": true,
+        "parsed": "Millbrook | 0.556",
+        "gold": "Millbrook | 0.6",
+        "api_calls": 4,
+        "input_tokens": 4370,
+        "output_tokens": 306,
+        "seconds": 6.218
+      },
+      "Q-11": {
+        "correct": false,
+        "answered": true,
+        "parsed": "Redfen | 53.508",
+        "gold": "Redfen | 56.1",
+        "api_calls": 3,
+        "input_tokens": 3552,
+        "output_tokens": 350,
+        "seconds": 5.225
+      }
+    }
+  }
+}
